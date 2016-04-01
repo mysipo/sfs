@@ -93,24 +93,24 @@
                     }
                     </script>
             </div>
-            <div class="form-item cf">
+            <div class="form-item">
                 <label class="item-label">主讲人介绍<span class="check-tips"></span></label>
                 <div class="controls">
-                <textarea name="lc_speak_intr">{$info.lc_speak_intr}</textarea>
+                <textarea name="lc_speak_intr" class="content01">{$info.lc_speak_intr}</textarea>
                 {:hook('adminArticleEdit', array('name'=>lc_speak_intr,'value'=>$info['lc_speak_intr']))}
                 </div>
             </div>
-            <div class="form-item cf">
+            <div class="form-item">
                 <label class="item-label">课程简介<span class="check-tips"></span></label>
                 <div class="controls">
-                <textarea name="lc_content">{$info.lc_content}</textarea>
+                <textarea name="lc_content" class="content02">{$info.lc_content}</textarea>
                 {:hook('adminArticleEdit', array('name'=>lc_content,'value'=>$info['lc_content']))}
                 </div>
             </div>
-            <div class="form-item cf">
+            <div class="form-item">
                 <label class="item-label">大纲<span class="check-tips"></span></label>
                 <div class="controls">
-                <textarea name="lc_outline">{$info.lc_outline}</textarea>
+                <textarea name="lc_outline" class="content03">{$info.lc_outline}</textarea>
                 {:hook('adminArticleEdit', array('name'=>lc_outline,'value'=>$info['lc_outline']))}
                 </div>
             </div>
@@ -140,5 +140,21 @@
         });
         //导航高亮
         highlight_subnav('{:U('Playlive/index')}');
+
+        var textChildList = $('#tab1 > .form-item:last-child').children('.form-item')
+        var contentList = $('.ke-content').length
+        console.log(contentList)
+        var text_01       = textChildList.eq(1).text()
+        /*console.log(text_01)*/
+        $('#submit').on('click', function(e) {
+            var contentList1 = $('.ke-edit-iframe')[0].contentWindow;
+            var contentList2 = $('.ke-edit-iframe')[1].contentWindow;
+            var contentList3 = $('.ke-edit-iframe')[2].contentWindow;
+            $('.content01').html(contentList1.document.body.innerText)
+            $('.content02').html(contentList2.document.body.innerText)
+            $('.content03').html(contentList3.document.body.innerText)
+        });
+
+
     </script>
 </block>
