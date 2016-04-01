@@ -1,0 +1,65 @@
+<extend name="Public/base"/>
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+<block name="body">
+	<div class="main-title">
+		<h2>{:isset($info['node_id'])?'编辑':'新增'}视频</h2>
+	</div>
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+			<form action="{:U()}" method="post" class="form-horizontal">
+				<!-- 基础 -->
+				<input type="hidden" name="video_id" value="{$info.video_id}">
+				<div id="tab1" class="tab-pane in tab1">
+					<div class="form-item">
+						<label class="item-label">
+							视频名称<span class="check-tips">（不能为空）</span>
+						</label>
+						<div class="controls">
+							<input type="text" name="node_title" class="text input-5x" value="{$info.node_title|default=''}">
+						</div>
+					</div>
+			        <div class="form-item">
+						<label class="item-label">视频标识</label>
+						<div class="controls">
+							<input type="text" name="qcloud_id" class="text input-5x" value="{$info.qcloud_id|default=''}" maxlength="20" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')">
+						</div>
+					</div>
+					<input type="hidden" name="qcloud_app" class="text input-5x" value="{$info.qcloud_app|default='1251979435'}">
+
+				</div>
+				<div class="form-item">
+					<input type="hidden" name="node_id" value="{$info.node_id|default=''}">
+					<button type="submit" id="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+					<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">
+		<present name="info.node_id">
+		Think.setValue("allow_publish", {$info.allow_publish|default=1});
+		Think.setValue("check", {$info.check|default=0});
+		Think.setValue("model[]", {$info.model|json_encode} || [1]);
+		Think.setValue("type[]", {$info.type|json_encode} || [2]);
+		Think.setValue("display", {$info.display|default=1});
+		Think.setValue("reply", {$info.reply|default=0});
+		Think.setValue("reply_model[]", {$info.reply_model|json_encode} || [1]);
+		</present>
+		$(function(){
+			showTab();
+			$("input[name=reply]").change(function(){
+				var $reply = $(".form-item.reply");
+				parseInt(this.value) ? $reply.show() : $reply.hide();
+			}).filter(":checked").change();
+		});
+		//导航高亮
+		highlight_subnav('{:U('Class/index')}');
+	</script>
+</block>

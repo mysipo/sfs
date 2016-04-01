@@ -1,0 +1,128 @@
+<extend name="Public/base"/>
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+<block name="body">
+	<div class="main-title">
+		<h2>{:isset($info['id'])?'编辑':'新增'}系列</h2>
+	</div>
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+			<form action="{:U()}" method="post" class="form-horizontal">
+
+				<div id="tab1" class="tab-pane in tab1">
+					<div class="form-item">
+						<div class="controls">
+							系列标题：&nbsp;<input type="text" name="ser_title" class="text input-large" value="{$info.ser_title|default=''}"><span class="check-tips">（标题不能为空）</span>
+						</div>
+					</div>
+					<div class="form-item cf">
+						<div class="controls">
+							频&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;道：
+							<select name="cl_id" class="input-3x">
+								<volist name="class" id="class">
+									<option value="{$class.cl_id}">{$class.cl_title}</option>
+								</volist>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-item">
+						<div class="controls">
+							级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
+							<select name="ser_level" id="" class="input-3x">
+								<option value="1">初级</option>
+								<option value="2">中级</option>
+								<option value="3">高级</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-item">
+						<div class="controls">
+							价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：&nbsp;<input type="text" name="price" class="text input-3x" value="{$info.price|default='0'}" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="9"><span class="check-tips">系列打包价格，默认0为免费</span>
+						</div>
+					</div>
+					<div class="form-item">
+						<div class="controls">
+							折&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扣：
+							<select name="dct_id" id="" class="input-3x" disabled >
+								<option value="1">原价</option>
+								<option value="2">打折期</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-item cf">
+						<div class="controls">
+							推&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;广：
+							<select name="ser_key" class="input-3x">
+								<option value="1">默认</option>
+								<option value="2">置顶</option>
+								<option value="3">精华</option>
+								<option value="4">活动</option>
+								<option value="5">推广</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-item">
+						<div class="controls">
+							报名人数：&nbsp;<input type="text" name="ser_num" class="text input-3x" value="{$info.ser_num|default='0'}" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="5"><span class="check-tips">默认为0,不限人数</span>
+						</div>
+					</div>
+					<div class="form-item">
+						<div class="controls">
+							排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;序：
+							<input type="text" name="ser_sort" class="text input-3x" value="{$info.ser_sort|default='0'}" onkeyup="if(/\D/.test(this.value)){this.value='';}" maxlength="4">
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">关键字</label>
+						<div class="controls">
+							<label class="textarea input-large">
+								<textarea name="ser_tag">{$info.ser_tag|default=''}</textarea>
+							</label>
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">描述</label>
+						<div class="controls">
+							<label class="textarea input-large">
+								<textarea name="ser_desc">{$info.ser_desc|default=''}</textarea>
+							</label>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="form-item">
+					<input type="hidden" name="ser_id" value="{$info.ser_id|default=''}">
+					<button type="submit" id="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+					<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">
+		<present name="info.ser_id">
+		Think.setValue("ser_level", {$info.ser_level|default=2});
+		Think.setValue("dct_id", {$info.dct_id|default=0});
+		Think.setValue("cl_id", {$info.cl_id|default=1});
+		Think.setValue("ser_key", {$info.ser_key|default=1});
+		Think.setValue("reply", {$info.reply|default=0});
+		Think.setValue("reply_model[]", {$info.reply_model|json_encode} || [1]);
+		</present>
+		$(function(){
+			showTab();
+			$("input[name=reply]").change(function(){
+				var $reply = $(".form-item.reply");
+				parseInt(this.value) ? $reply.show() : $reply.hide();
+			}).filter(":checked").change();
+		});
+		//导航高亮
+		highlight_subnav('{:U('Playlive/index')}');
+	</script>
+</block>

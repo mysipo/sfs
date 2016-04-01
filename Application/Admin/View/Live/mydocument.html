@@ -1,0 +1,16 @@
+<extend name="Public/base"/>
+
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+
+
+<block name="body">
+    <!-- 主体 -->
+    <div id="indexMain" class="index-main">
+       <!-- 插件块 -->
+       <div class="container-span">{:hook('AdminIndex')}</div>
+    </div>
+
+</block>

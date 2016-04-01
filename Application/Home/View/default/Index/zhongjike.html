@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <meta name="keywords" content="专利培训、代理人培训、专利代理人培训、思博学院、知识产权、知识产权网、知识产权论坛、知识产权案例、知识产权新闻、思博知识产权网" />
+
+    <meta name="description" content="思博学院（关注你的成长）是中国最专业的专利培训学习平台，中国知识产权精英汇聚的网络社区，提供企业知识产权管理、知识产权资讯、知识产权保护，让知识产权成为中国企业转型升级的助推器！ " />
+
+    <link rel="icon" href="__PUBLIC__/static/home/images/sbxy.ico">
+
+
+
+    <title>思博学院-国内专利申请实战课程（中级）——专利基础ABC</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="__HOMECSS__bootstrap.min.css" rel="stylesheet">
+
+    <link href="__HOMECSS__bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="__HOMECSS__sbxy2016.css" rel="stylesheet" type="text/css">
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+
+    <!--[if lt IE 9]><script src="../../assets/__HOMEJS__ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <script src="__HOMEJS__ie-emulation-modes-warning.js"></script>
+
+
+
+    <!--[if lte IE 9]>
+
+    <script src="__HOMEJS__html5.js"></script>
+
+    <script src="__HOMEJS__respond.min.js"></script>
+
+    <![endif]-->
+
+    
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+    <script src="__HOMEJS__ie10-viewport-bug-workaround.js"></script>
+
+    <!-- js -->
+
+    <script src="__HOMEJS__jquery.js"></script>
+
+    <script src="__HOMEJS__bootstrap.min.js"></script>
+
+    <script src="__HOMEJS__menu.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="__HOMEJS__sbxy_jdt.js"></script>
+
+    <script type="text/javascript" src="__HOMEJS__huojian.js"></script>
+
+    <!--[if lte IE 6]>
+
+    <script type="text/javascript" src="__HOMEJS__belatedPNG.js"></script>
+
+    <script type="text/javascript">
+
+        var __IE6=true;
+
+        DD_belatedPNG.fix('.logo img,.prev img,.next img,img');
+
+    </script>
+
+    <![endif]-->
+<script language='javascript'>
+$(function(){
+$('#btn').click(function(){
+$div1=$('#div1');
+if($div1.is(':hidden')){
+$div1.show();
+}else if($div1.is(':visible')){
+$div1.hide();
+}
+});
+});
+</script>
+<script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2016/05/09 20:00:00');
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+
+        document.getElementById("t_d").innerHTML = d+"天";
+        document.getElementById("t_h").innerHTML = h+"时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+    }
+    setInterval(getRTime,1000);
+    </script> 
+  </head>
+
+
+
+<body style="background:#fff;">
+
+<!--  顶部开始--> 
+
+
+
+    <div id="n1" class="top_sbxy hidden-xs hidden-sm" > 
+
+        <div class="container">
+
+            <div class="logo">
+
+                <img src="__PUBLIC__/static/home/images/sbxy_logo.jpg">
+
+            </div>
+
+            <div class="nav_sbxy">
+
+                <ul>
+
+                    <li> <a href="http://s.mysipo.com">首页</a></li>
+
+                    <li> <a href="#n2" class="down">职业培训</a></li>
+
+                    <li><a href="/Index/douyanpeng">公开课</a></li>
+
+                    <li> <a href="http://s.mysipo.com/#n3">讲师介绍</a></li>
+
+
+
+                </ul>
+
+            </div>
+
+            
+
+   <!--  登陆前状态--> 
+
+    <if condition="!$user or $user.id eq ''" > 
+
+
+
+    <div class="right hidden-xs hidden-sm">
+
+
+
+            <ul class="ulr">
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/member/reg/"  target="_self">注册</a>
+
+
+
+                </li>
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/member/login/"  target="_self">登录</a>
+
+
+
+                </li>
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/Thirdparty/qqlogin/"  target="_self" class="qq"> </a>
+
+
+
+                </li>
+
+                
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/Weixinlogin/weixin_login/"  target="_self" class="weix"> </a>
+
+
+
+                </li>
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/Thirdparty/sinalogin/"  target="_self" class="weibo"> </a>
+
+
+
+                </li>
+
+
+
+            </ul>
+
+
+
+        </div>
+
+
+
+    <else />
+
+
+
+        <!-- 登陆后状 -->
+
+
+
+        <div class="left hidden-xs hidden-sm">
+
+
+
+            <ul class="menu">
+
+
+
+                <li class="li_3"><a class="" href="http://user.mysipo.com"><img src="http://www.mysipo.com/uc_server/avatar.php?uid={$user.id}&size=small" style="width:40px; height:40px;margin-top:-3px;">  </a>
+
+
+
+                    <dl class="li_3_content">
+
+
+
+                        <dt></dt>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/plugin.php?id=team"><span>申请版主（签到中心）</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=space&do=friend"><span>好友</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/forum.php?mod=guide&view=my"><span>帖子</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=magic"><span>道具</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=medal"><span>勋章</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=space&do=favorite&view=me"><span>收藏</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=task"><span>任务</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/forum.php?mod=collection&op=my"><span>淘贴</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php"><span>动态</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/misc.php?mod=ranklist"><span>排行榜</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=spacecp"><span>设置</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/member.php?mod=logging&amp;action=logout&amp;formhash=ec98622e" target="_self"><span>退出</span></a></dd>
+
+
+
+
+
+
+
+                    </dl>
+
+
+
+                </li>
+
+
+
+            </ul> 
+
+
+
+        </div>
+
+
+
+    </if> 
+
+
+
+            
+
+        </div>   
+
+    </div>
+
+<!--顶部结束--> 
+
+<!--手机顶部--> 
+
+<div class="container hidden-lg">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mytab" aria-expanded="false">
+
+                    <span class="sr-only">Toggle navigation</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <a class="navbar-brand" href="#"><img src="__PUBLIC__/static/home/images/photo_logo.png" height="25em"></a>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="mytab">
+
+                <ul class="nav navbar-nav">
+
+                    <li class="active" role="presentation"><a href="http://s.mysipo.com" >首页</a></li>
+
+                    <li role="presentation"><a href="#" class="down">职业培训</a></li>
+
+                    <li role="presentation"><a href="/Index/douyanpeng">公开课</a></li>
+
+                    <li role="presentation"><a href="http://s.mysipo.com/#n3">讲师介绍</a></li>
+
+
+                </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav> 
+
+</div>    
+
+  <!--  手机顶部结束-->   
+
+	<div class="con_kecen">	
+    	<div class="container">
+            <div class="js_con">
+            	<div class="lef">
+                	<img src="__PUBLIC__/static/home/images/kec_ny.png">
+                </div>
+                <div class="rig">
+                	<div class="txt">
+                    	<h2>国内专利申请技能职业培训（中级）</h2>
+                        <p><strong>时间：</strong>2016年5月9日-6月30日</p>
+                        <p><strong>地点：</strong>不限区域网络直播</p>
+                        <p><strong>主讲：</strong>国内顶级讲师团</p>
+                        <p><strong>费用：</strong>低至<b>1500元</b></p>
+                        <p class="p1">
+                        	进一步讲解专利的新颖性、创造性、审查意见答复技巧、撰写技巧等相关知识点；介绍专利挖掘、信息检索；结合案例提升撰写技巧、创造性判断、审查意见答复以及专利挖掘等内容。
+                        </p>
+                    </div>
+                    <div class="butt">
+                    	<a href="#n2" class="but1">立即报名</a>
+                        <a href="#" class="but2">
+            <span id="t_d">00天</span>
+            <span id="t_h">00时</span>
+            <span id="t_m">00分</span>
+            <span id="t_s">00秒</span></a>
+                    </div>
+                </div>
+            	
+            </div>
+        </div>
+    </div>
+     <div class="con_xkecen hidden-xs hidden-sm" style="margin-top:20px; padding-bottom:0px;">  
+        <div class="container">
+             <div class="zhankai">
+                    <a href="javascript:;" id="btn" >查看课程日历</a>
+             </div>
+         </div>
+     </div>
+<!-- 课程开始 -->
+	<div class="con1_sbxy" id="div1" style="display:none;">	
+    	<div class="container">          
+          
+          <div class="rl">
+            	<div class="a_1w"> <span class="span1"></span> <span class="spanz">理论课程</span> </div>
+                <div class="a_2w"><span class="span2"></span> <span class="spanz">实践课程</span> </div>
+            </div>
+            <div class="table1">
+				<div class="lef lef_photo_no hidden-xs hidden-sm">
+                	五 </br></br>月
+                </div>
+                <div class="lef lef_photo">
+                	五月
+                </div>
+                <div class="rig">
+                	<ul >
+                    	<!-- <a href="http://s.mysipo.com/show/26.html" target="_blank"> -->
+                    	<li class="li1">
+                        	<div class="tab"> 
+                                <p class="p1"><span class="span1"> 9</span> <span class="span2"> 周一</span> </p>
+                                <p class="p2"> 新颖性</p>
+                                <em class="tub1"></em>
+                            </div>
+                        </li>
+                        </a>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 10</span> <span class="span2"> 周二</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 11</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li1"> 
+                        	<div class="tab"> 
+                                <p class="p1"><span class="span1"> 12</span> <span class="span2"> 周四</span> </p>
+                                <p class="p2"> 创造性</p>
+                                <em class="tub1"></em>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 13</span> <span class="span2"> 周五</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 14</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 15</span> <span class="span2"> 周日</span> </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul >
+                    	<li class="li1">
+                        	<div class="tab"> 
+                                <p class="p1"><span class="span1"> 16</span> <span class="span2"> 周一</span> </p>
+                                <p class="p2"> 审查意见的答复及修改</p>
+                                <em class="tub1"></em>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 17</span> <span class="span2"> 周二</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 18</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li1"> 
+                        	<div class="tab"> 
+                                <p class="p1"><span class="span1"> 19</span> <span class="span2"> 周四</span> </p>
+                                <p class="p2"> 主要驳回条款及复审</p>
+                                <em class="tub1"></em>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 20</span> <span class="span2"> 周五</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 21</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 22</span> <span class="span2"> 周日</span> </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul >
+                    	<li class="li1">
+                        	<div class="tab"> 
+                                <p class="p1"><span class="span1"> 23</span> <span class="span2"> 周一</span> </p>
+                                <p class="p2"> 文献信息及初步检索</p>
+                                <em class="tub1"></em>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 24</span> <span class="span2"> 周二</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 25</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li1"> 
+                        	<div class="tab"> 
+                                <p class="p1"><span class="span1"> 26</span> <span class="span2"> 周四</span> </p>
+                                <p class="p2"> 专利挖掘</p>
+                                <em class="tub1"></em>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 27</span> <span class="span2"> 周五</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 28</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 29</span> <span class="span2"> 周日</span> </p>
+                            </div>
+                        </li>
+                        
+                    </ul>    
+                </div>
+													
+            </div>
+            <div class="table2">
+                    <div class="lef lef_photo_no hidden-xs hidden-sm" style="height:360px;">
+                        六</br></br>月
+                    </div>
+                    <div class="lef lef_photo">
+                        六月
+                    </div>
+                <div class="rig">
+                	<ul >
+                    	<li class="li1"> 
+                            <div class="tab"> 
+                                <p class="p1"><span class="span1"> 30</span> <span class="span2"> 周一</span> </p>
+                                <p class="p2"> 从维权的角度看权利要求撰写</p>
+                                <em class="tub1"></em>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 31</span> <span class="span2"> 周二</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab"> 
+                        		<p class="p_wz"><span class="span1"> 1</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li3 huojian"> 
+                        	<div class="tab"> 
+                        	<p class="p_wz"><span class="span1"> 2</span> <span class="span2"> 周四</span> </p>
+                           	</div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 3</span> <span class="span2"> 周五</span> </p>
+                                <p class="p_wz2"> 发作业</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 4</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 5</span> <span class="span2"> 周日</span> </p>
+                                <p class="p_wz2"> 交作业</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul >
+                    	<li class="li3 huojian">
+                        	<div class="tab rlbj1"> 
+                                <div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 6</span> <span class="span2"> 周一</span> </p>
+                           	    </div>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 7</span> <span class="span2"> 周二</span> </p>
+                                <p class="p_wz2"> 批阅</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 8</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li1"> 
+                        	<div class="tab rlbj1"> 
+                                <p class="p3"><span class="span1"> 9</span> <span class="span2"> 周四</span> </p>
+                                <p class="p4"> 较复杂案例的撰写练习</p>
+                                <em class="tub2"></em>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 10</span> <span class="span2"> 周五</span> </p>
+                                <p class="p_wz2"> 发作业</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 11</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 12</span> <span class="span2"> 周日</span> </p>
+                                <p class="p_wz2"> 交作业</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul >
+                    	<li class="li3 huojian">
+                                <div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 13</span> <span class="span2"> 周一</span> </p>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 14</span> <span class="span2"> 周二</span> </p>
+                                <p class="p_wz2"> 批阅</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 15</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li1"> 
+                        	<div class="tab rlbj2"> 
+                                <p class="p3"><span class="span1"> 16</span> <span class="span2"> 周四</span> </p>
+                                <p class="p4"> 初步检索及新创性判断</p>
+                                <em class="tub2"></em>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 17</span> <span class="span2"> 周五</span> </p>
+                                <p class="p_wz2"> 发作业</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 18</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 19</span> <span class="span2"> 周日</span> </p>
+                                <p class="p_wz2"> 交作业</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul >
+                    	<li class="li3 huojian">
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 20</span> <span class="span2"> 周一</span> </p>
+                           	 </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 21</span> <span class="span2"> 周二</span> </p>
+                                <p class="p_wz2"> 批阅</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab rlbj1"> 
+                        		<p class="p_wz"><span class="span1"> 22</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li1"> 
+                        	<div class="tab rlbj1"> 
+                                <p class="p3"><span class="span1"> 23</span> <span class="span2"> 周四</span> </p>
+                                <p class="p4"> 审查意见答复</p>
+                                <em class="tub2"></em>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 24</span> <span class="span2"> 周五</span> </p>
+                                <p class="p_wz2"> 发作业</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 25</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="lisj yue_no"> 
+                        	<div class="tab rlbj2"> 
+                        		<p class="p_wz"><span class="span1"> 26</span> <span class="span2"> 周日</span> </p>
+                                <p class="p_wz2"> 交作业</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul >
+                        <li class="li3 huojian">
+                                <div class="tab rlbj2"> 
+                                <p class="p_wz"><span class="span1"> 27</span> <span class="span2"> 周一</span> </p>
+                            </div>
+                        </li>
+                        <li class="lisj"> 
+                            <div class="tab rlbj2"> 
+                                <p class="p_wz"><span class="span1"> 28</span> <span class="span2"> 周二</span> </p>
+                                <p class="p_wz2"> 批阅</p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                            <div class="tab rlbj2"> 
+                                <p class="p_wz"><span class="span1"> 29</span> <span class="span2"> 周三</span> </p>
+                            </div>
+                        </li>
+                        <li class="li1"> 
+                            <div class="tab rlbj2"> 
+                                <p class="p3"><span class="span1"> 30</span> <span class="span2"> 周四</span> </p>
+                                <p class="p4"> 不完善交底书的挖掘及撰写</p>
+                                <em class="tub2"></em>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                            <div class="tab rlbj1"> 
+                                <p class="p_wz"><span class="span1"> 1</span> <span class="span2"> 周五</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                            <div class="tab rlbj1"> 
+                                <p class="p_wz"><span class="span1"> 2</span> <span class="span2"> 周六</span> </p>
+                            </div>
+                        </li>
+                        <li class="li2 huojian"> 
+                            <div class="tab rlbj1"> 
+                                <p class="p_wz"><span class="span1"> 3</span> <span class="span2"> 周日</span> </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>										
+            </div>
+
+            <div class="tab_text">
+            	<div class="lef">
+                	<div class="tab">
+                    	课程说明
+                    </div>
+                </div>
+                <div class="rig">
+                	<span class="spanl"><em class="cor1">理论课程：</em></span>
+                    <span class="spanl"><em class="cor2">☆ </em>在晚上20:00-22:00开课<br></span>
+					<span class="spanl"><em class="cor2">实践课程：</em> </span>
+                    <span class="spanl1"><em class="cor2">☆ </em>老师周五下午17:00发布案例（技术交底书）&nbsp;&nbsp;       </span>      
+                     <span class="spanr">   <em class="cor2">☆</em> 学员撰写&交作业（周日下午17: 00）</span> <br>    
+                    <span class="spanl1"><em class="cor2"> ☆ </em>老师阅卷批改&反馈学员（周二下午17：00）   </span>   
+                    <span class="spanr"><em class="cor2">☆</em> 老师网络直播讲解作业+互动（周四晚上20:00-22:00） </span> <br>
+                </div>
+            </div>
+            <div class="zhongji">
+            	<p class="p1"> 国内专利申请中级培训</p>
+                <p class="p2"> <img src="__PUBLIC__/static/home/images/zjtab.png">暂定5月开课 敬请期待</p>
+            </div>        
+      </div>
+    </div>
+    
+    <!-- 新版课程开始 -->
+
+    <div class="con_xkecen">    
+        <div class="container">
+            <div class="js_con">
+                <div class="title">
+                    <div class="span1">
+                        理论课程
+                    </div>
+                </div>
+                <div class="tex">
+                    <ul>
+                        <a href="http://s.mysipo.com/show/26.html" target="_blank">
+                        <li>
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/zj_sbxy1.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>新颖性 </h2>
+                                    <p> <span class="span1">时间：2016.5.9（周一）20:00-22:00</span> </p>
+                                    <!-- <p>  讲解专利基本概念、特点、基本原则、类型以及专利审查标准等相关基础知识点；介绍专利申请的文件、审查流程以及费用；结合案例介绍专利的重要性、专利权运用的常见手段，专利维护的基本方法。</p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;" >
+                        <li>
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/zj_sbxy2.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>创造性 </h2>
+                                    <p> <span class="span1">时间：2016.5.12（周四）20:00-22:00</span> </p>
+                                    <!-- <p>  本课程主要介绍了三种专利申请文件的组成及结构，特别是通过展示实际的专利文本，使初学者对专利文献建立直
+                                    观的印象，在学习本课程后，初学者将详细了解到三种专利的各自特点
+                                    、专利号的含义、专利文本的类型、权利要求书和说明书的组成作用和结构、外观设计专利申请文件的组成和结构等内容，为专利申请文件的撰写做好铺垫。
+                                    </p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;" >
+                        <li>
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/zj_sbxy3.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>审查意见的答复及修改 </h2>
+                                    <p>  <span class="span1">时间：2016.5.16（周一）20:00-22:00</span> </p>
+                                    <!-- <p>   
+                                    以撰写专利申请文件为导向，以“现有技术的缺陷——发明的技术方案——工作原理——技术效果”为逻辑线索，力图讲清每个环节。本课程对企业IPR撰写技术交底书，以及专利事务所的专利代理人完善和解读技术交底书均有帮助。
+                                    </p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;" >
+                        <li class="rig">
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/zj_sbxy4.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>主要驳回条款及复审 </h2>
+                                    <p>  <span class="span1">时间：2016.5.19（周四）20:00-22:00</span> </p>
+                                    <!-- <p>  
+                                    本课程引领学员从技术交底书出发，在明确要解决的技术问题以及技术方案的前提下，掌握独立权利要求的必要技术特征、追加型从属权利要求，以及限定型从属权利要求的基本原理，进而能够撰写独立权利要求书和从属权利要求。
+                                    </p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                    </ul>
+                    </div>
+                    <div class="tex">
+                    <ul>
+                        <a href="javascript:;" >
+                        <li>
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/zj_sbxy5.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>文献信息及初步检索 </h2>
+                                    <p> <span class="span1">时间：2016.5.23（周一）20:00-22:00</span> </p>
+                                    <!-- <p>  
+                                    本课程讲解发明名称、技术领域、背景技术、发明内容、附图说明、具体实施方式以及说明书附图的撰写。着重讲解如何通过说明书对权利要求书进行支持。
+                                    </p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;">
+                        <li>
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/zj_sbxy6.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>专利挖掘 </h2>
+                                    <p> <span class="span1">时间：2016.5.26（周四）20:00-22:00</span> </p>
+                                    <!-- <p> 本课程主要介绍了清楚、支持和公开充分三个专利法条款，通过举例说明的形式，从正反两个角度详细阐述了在文件
+                                    撰写过程中应当如何满足上述三个法条的要求。通过学习本课程，初学者对新创性以
+                                    外的实质性条款有了初步的认识，知晓了专利申请文件应当满足的其他主要条件，促使初学者逐渐养成良好的撰写习惯。
+                                    </p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;" >
+                        <li>
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/zj_sbxy7.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>从维权的角度看权利要求撰写 </h2>
+                                    <p>  <span class="span1">时间：2016.5.30（周一）20:00-22:00</span> </p>
+                                    <!-- <p>  本课程讲解三种类型专利申请的申请文件填写、提交文件的形式要求、专利审批流程，以及常见法律手续文件准备，办理时限、费用。专利申请从准备文件、提交、专利局受理到授权各个审查阶段介绍。</p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;" >
+                        <li class="rig">
+                            <div class="box">
+                                <div class="ims">
+                                    <img src="__PUBLIC__/static/home/images/sbxy_xkc8.jpg">
+                                </div>
+                                <div class="txt">
+                                    <h2>理论课程终极测验 </h2>
+                                    <p>  <span class="span1">时间：2016.6.2（周四）20:00-22:00</span> </p>
+                                    <!-- <p>  本课程讲解三种类型专利申请的申请文件填写、提交文件的形式要求、专利审批流程，以及常见法律手续文件准备，办理时限、费用。专利申请从准备文件、提交、专利局受理到授权各个审查阶段介绍。</p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+
+
+                    </ul>
+                    </div>
+                </div>
+                <!--实践-->
+               <div class="clear"></div>
+                <div class="js_con_sj">
+                <div class="title">
+                    <div class="span1">
+                        实践课程
+                    </div>
+                </div>
+                <div class="tex">
+                	<ul>
+                    	
+                        <a href="javascript:;" >
+                    	<li>
+                        	<div class="box">
+                            	<div class="ims">
+                                	<img src="__PUBLIC__/static/home/images/sbxy_gkc1.jpg">
+                                </div>
+                                <div class="txt">
+                                	<h2>较复杂案例的撰写练习 </h2>
+                                    <p> <span class="span1">时间：2016.6.3（周五）发作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.5（周日）交作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.7（周二）批阅作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.9（周四）20:00直播讲解</span> </p>
+                                    <!-- <p class="p1"> 权利要求撰写练习（机械-肥皂盒）</p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;" >
+                        <li>
+                        	<div class="box">
+                            	<div class="ims">
+                                	<img src="__PUBLIC__/static/home/images/sbxy_gkc2.jpg">
+                                </div>
+                                <div class="txt">
+                                	<h2>初步检索及新创性判断 </h2>
+                                    <p> <span class="span1">时间：2016.6.10（周五）发作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.12（周日）交作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.14（周二）批阅作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.16（周四）20:00直播讲解</span> </p>
+                                    <!-- <p class="p1">  
+                                    全文撰写练习（机械-口罩）
+                                    </p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;"  >
+                        <li>
+                        	<div class="box">
+                            	<div class="ims">
+                                	<img src="__PUBLIC__/static/home/images/sbxy_gkc3.jpg">
+                                </div>
+                                <div class="txt">
+                                	<h2>审查意见答复 </h2>
+                                    <p> <span class="span1">时间：2016.6.17（周五）发作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.19（周日）交作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.21（周二）批阅作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.23（周四）20:00直播讲解</span> </p>
+                                    <!-- <p class="p1">   
+                                    全文撰写练习（软件-直播交互）
+									</p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                        <a href="javascript:;" >
+                        <li class="rig">
+                        	<div class="box">
+                            	<div class="ims">
+                                	<img src="__PUBLIC__/static/home/images/sbxy_gkc4.jpg">
+                                </div>
+                                <div class="txt">
+                                	<h2>不完善交底书的挖掘及撰写 </h2>
+                                    <p> <span class="span1">时间：2016.6.24（周五）发作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.26（周日）交作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.28（周二）批阅作业</span> </p>
+                                    <p> <span class="span1">时间：2016.6.30（周四）20:00直播讲解</span> </p>
+                                   <!--  <p class="p1">  
+                                    全文撰写练习（案例4）
+                                    </p> -->
+                                </div>
+                            </div>
+                        </li>
+                        </a>
+                    </ul>
+                    </div>
+                    
+                </div>
+            </div>
+		</div>
+     </div>
+
+     <div class="con1_jsjj" id="n3">    
+
+        <div class="container">
+
+            <div class="title">
+
+                <img src="__PUBLIC__/static/home/images/title_img.png"> 讲师简介
+
+            </div>
+
+            <div class="js_con">
+
+                <div class="txt">
+
+                    <ul>
+
+                        <li class="li2">
+
+                             <div class="kuand">
+
+                                <div class="tu">
+
+                                    <img src="__PUBLIC__/static/home/images/yijiling.png">
+
+                                    <div class="tit">
+
+                                         <span class="span_wz1">易吉灵</span>  
+
+                                         <span class="span_wz2">专利审查专家</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="txt">
+
+                                    北京交通大学通信专业硕士，三年通信行业研发经验曾为华为、大唐、中兴、电信等
+
+                                    企业提供解决方案。曾参与代理人考试阅卷。十年专利审查经验，原国家知识产权局处级审查员
+
+                                    ，涉外培训教师，具有专利代理人资格，快智慧培训总监。
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="li2">
+
+                             <div class="kuand">
+
+                                <div class="tu">
+
+                                    <img src="__PUBLIC__/static/home/images/yijiling2.png">
+
+                                    <div class="tit">
+
+                                         <span class="span_wz1">窦艳鹏  </span>  
+
+                                         <span class="span_wz2">专利审查专家</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="txt">
+
+                                    原国家知识产权局专利局光电部审查员，审查协作中心培训教师，8年专利实审、复审、分析经验；
+
+擅长专利撰写，疑难案件答复、复审无效。
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="li2">
+
+                             <div class="kuand">
+
+                                <div class="tu">
+
+                                    <img src="__PUBLIC__/static/home/images/yijiling3.png">
+
+                                    <div class="tit">
+
+                                         <span class="span_wz1">周淑娟   </span>  
+
+                                         <span class="span_wz2">资深专利代理人</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="txt">
+
+                                    近10年机械、电学专利代理经验；
+
+擅长专利撰写、答复、复审。
+
+曾服务：三一重工、九州风神科贸、百度、中兴、英华达、京东方。
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="li3">
+
+                             <div class="kuand">
+
+                                <div class="tu">
+
+                                    <img src="__PUBLIC__/static/home/images/yijiling4.png">
+
+                                    <div class="tit">
+
+                                         <span class="span_wz1">赵永辉   </span>  
+
+                                         <span class="span_wz2">专利审查专家</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="txt">
+
+                                    原专利局审查科室主任，9年机械领域专利审查经验，精通专利的挖掘、布局、撰写、答复、复审等业务；曾担任新审查员培训教师、代理人培训教师，先后撰写了十余篇与知识产权相关的专业文章，多篇获评代理人协会征文优秀论文。
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            
+
+         </div>   
+
+    </div> 
+
+
+     <!-- 新版课程结束 -->
+
+	<div class="con1_bm" style="background:#fff;">	
+    	<div class="container">
+        	<div class="title" id="n2">
+            	<img src="__PUBLIC__/static/home/images/title_img.png"> 报名缴费  
+            </div>
+            <div class="js_con" >
+            	<div class="l">
+                	<div class="tit">
+                    	原价：4000元
+                    </div>
+                    <div class="txt">
+                    	<div class="z">
+                        	<img src="__PUBLIC__/static/home/images/bm_d1.png"> <br>
+                            个人报名：5折 <br>
+                            <span>2000元</span> <br>
+                        </div>
+                        <div class="y">
+                        	<img src="__PUBLIC__/static/home/images/bm_d2.png"> <br>
+                            组团三人行：4.5折 <br>
+                            <span>1800元</span> <br>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wz">
+                    	<span class="span1">画外音：注意啦！</span><br>
+                        三月底之前缴费，<span class="span2">再减300元。</span><br>
+                    </div>
+                </div>
+                <div class="r" >
+                	<div class="title">
+                    	<span class="sp1">如何报名 </span>
+                        <span class="sp2div">
+                        	<span class="sp2"> 报名热线： 18010022696 </span>
+                        </span>
+                       
+                    </div>
+                    <div class="txt">
+                    	<div class="z">
+                        	<img src="__PUBLIC__/static/home/images/xywx.png"><br>
+                            <span class="span2">第一步：添加好友</span><br>
+                            扫描上面二维码（或查找微信号 <span class="span1">mysipo426</span>）添加 思博君 的个人微信号<br>  
+                        </div>
+                        <div class="z">
+                        	<img src="__PUBLIC__/static/home/images/xywx2.png"><br>
+                            <span class="span2">第二步：提交资料</span><br>
+                            方式一：将个资料信息发送给”思博君“，针对认真提交信息的童鞋思博君有红包奖励哦~<br> 
+                            方式二： 在思博活动页报名点击<br><a href="http://act.mysipo.com/Activity/detail/id/402" target="_blank">我要报名</a> 
+                        </div>
+                        <div class="z">
+                        	<img src="__PUBLIC__/static/home/images/xywx3.png"><br>
+                            <span class="span2">第三步：缴纳费用</span><br>
+                            由于我们是小班授课，名额有限，因此通过审核的学员，请尽早缴纳报名费，以免错过本期开课，错过就要等半年哦~<br>  
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>    
+	</div>
+
+<div class="footers ">
+<div class="container">
+	<div class="footer_con">
+         <div class="Friendly hidden-xs hidden-sm">
+         	<h3 class="Footer_tit">
+                友情链接
+            </h3>
+            <ul>
+            	<li><a href="http://www.cnipr.com/" target="_blank">中国知识产权网</a></li>
+                <li><a href="http://www.8hy.org/" target="_blank"> 衡阳</a></li>
+                <li><a href="http://www.tmmark.com/" target="_blank">中国商标网</a></li>
+                <li><a href="http://www.jidian365.com/" target="_blank">极点网</a></li>
+                <li><a href="http://www.fffffw.com/" target="_blank">伍福文化</a></li>
+                <li><a href="http://www.wdy.com/" target="_blank">微电影网</a></li>
+                <li><a href="http://chongqing.liebiao.com/" target="_blank">重庆列表网</a></li>
+                <li><a href="http://www.berui.com/" target="_blank">合肥房产网</a></li>
+                <li><a href="http://www.yz53.com/" target="_blank">禹州在线</a></li>
+                <li><a href="http://www.tsingming.com/" target="_blank">中国清明网</a></li>
+                <li><a href="http://www.51offer.com/" target="_blank">英国留学</a></li>
+                <li><a href="http://yangzhou.focus.cn/" target="_blank">扬州房产信息网</a></li>
+                <li><a href="http://www.liuxue315.edu.cn/" target="_blank">出国留学</a></li>
+                <li><a href="http://www.0755lvs.cn/" target="_blank">深圳专利律师</a></li>
+                <li><a href="http://www.ipcoo.cn/" target="_blank">专利布局</a></li>
+                <li><a href="http://www.kzhihui.com/" target="_blank">知识产权服务</a></li>
+                <li><a href="http://www.gbicom.cn/" target="_blank">中国商标网</a></li>
+                <li><a href="http://www.lawyermr.com/" target="_blank">深律网</a></li>
+                <li><a href="http://www.wtoip.com" target="_blank">商标转让</a></li>
+                <li><a href="http://www.1633.com" target="_blank">技术交易平台</a></li>
+                <li><a href="http://www.idcicp.com" target="_blank">网络品牌保护</a></li>
+                <li><a href="http://www.shangbiaomyd.com" target="_blank">商标注册</a></li>
+                <li><a href="http://www.chen7782.com" target="_blank">注册商标</a></li>
+                <li><a href="http://www.fenxianggou.cc" target="_blank">科技创意</a></li>
+                <li><a href="http://www.qihaoip.com" target="_blank">7号网</a></li>
+                <li><a href="http://ipr.zbj.com/" target="_blank">八戒知识产权</a></li>
+            </ul>
+         </div>
+         <div class="clear"> </div>
+         <div class="end">
+         	   <div class="Houses"> 
+   				 © 2013-2016 北京思博知网科技有限公司<br>
+                 思博网 ( 京ICP备12050374号 京公安备11010802012124)
+               </div>	
+         </div>
+         
+    </div>
+  </div>  
+</div>
+<div class="huojian">
+ <!-- 返回顶部代码 开始 -->
+<div style="display:none;" id="rocket-to-top">
+	<div style="opacity:0;display:block;" class="level-2"></div>
+	<div class="level-3"></div>
+</div>
+</div>
+<!-- 代码 结束 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?8c6de5932bed397c45a36a716c38d952";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> 
+</body>
+</html>
