@@ -1,0 +1,138 @@
+<extend name="Public/base"/>
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+<block name="body">
+	<!-- 标题栏 -->
+	<div class="main-title">
+		<h2>录播列表</h2>
+
+	</div>
+    <div class="tools clearfloat">
+
+        <a class="btn" href="{:U('add')}" style="">新 增</a>
+        <!-- <button class="btn ajax-post" target-form="ids" url="{:U('ser/setStatus',array('status'=>1))}">启 用</button>
+        <button class="btn ajax-post" target-form="ids" url="{:U('ser/setStatus',array('status'=>0))}">禁 用</button> -->
+        <!-- <a class="btn" href="{:U('generate')}">删除</a> -->
+    </div>
+
+	<!-- 数据列表 -->
+	<div class="data-table">
+        <div class="data-table table-striped">
+        <table class="">
+            <thead>
+                <tr>
+        		<th>ID</th>
+        		<th>名称</th>
+                <th>直播课程</th>
+        		<th>讲师用户</th>
+        		<th>助教用户</th>
+                <th>价格</th>
+                <th>点赞数</th>
+                <th>评论数</th>
+        		<th>更新时间</th>
+                <!-- <th>排序</th> -->
+        		<th>操作</th>
+        		</tr>
+            </thead>
+            <tbody>
+        	<tbody>
+        		<notempty name="list">
+        		<volist name="list" id="video">
+        			<tr>
+        				<td>{$video.video_id}</td>
+        				<td class="td-lesson01">
+                            <div class="limit-cur" style="">{$video.title}</div>
+                            <div class="limit-all" style="display: none;position: absolute;background: rgba(78,78,78,.9);z-index: 9;border: 1px solid #eee;padding: 3px 5px;border-radius: 4px;color: #fff;font-size: 12px;"><p>{$video.sub_title}<p/></div>
+                        </td>
+                        <td class="td-lesson02" style="">
+                          <div class="limit-cur">{$video.live_title}</div>
+                          <div class="limit-all" style="display: none;position: absolute;background: rgba(78,78,78,.9);z-index: 9;border: 1px solid #eee;padding: 3px 5px;border-radius: 4px;color: #fff;">
+                          <p>{$video.sub_live}</p>
+                          </div>
+                        </td>
+                        <td>{$video.tch_name}</td>
+        				<td>{$video.tutor_name}</td>
+                        <td>{$video.price}</td>
+                        <td>{$video.like_num}</td>
+                        <td>{$video.comment_num}</td>
+        				<td>{$video.update_time|date="Y-m-d",###}</td>
+        				<td>
+                            <a title="编辑" href="{:U('edit?id='.$video['video_id'])}">编辑</a>
+        					<a title="视频" href="{:U('video_list?id='.$video['video_id'])}">视频</a>
+        					<a class="confirm ajax-get" title="删除" href="{:U('del?id='.$video['video_id'])}">删除</a>
+        				</td>
+        			</tr>
+        		</volist>
+        		<else/>
+        		<td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td>
+        		</notempty>
+        	</tbody>
+            </table>
+        </div>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+<script type="text/javascript">
+    <present name="cl_id">
+        Think.setValue("cl_id", {$cl_id|default=1});
+
+    </present>
+        (function($){
+        $(".data-table")
+            .on("submit", "form", function(){
+                var self = $(this);
+                $.post(
+                    self.attr("action"),
+                    self.serialize(),
+                    function(data){
+                        /* 提示信息 */
+                        var name = data.status ? "success" : "error", msg;
+                        msg = self.find(".msg").addClass(name).text(data.info)
+                                  .css("display", "inline-block");
+                        setTimeout(function(){
+                            msg.fadeOut(function(){
+                                msg.text("").removeClass(name);
+                            });
+                        }, 1000);
+                    },
+                    "json"
+                );
+                return false;
+            })
+            .on("focus","input",function(){
+                $(this).data('param',$(this).closest("form").serialize());
+
+            })
+            .on("blur", "input", function(e){
+                if($(this).data('param')!=$(this).closest("form").serialize()){
+                     e.stopPropagation();
+                     e.preventDefault()
+                    $(this).closest("form").submit();
+                }
+            });
+
+            $('#cl_id').change(function(){
+                var p1=$(this).children('option:selected').val();//这就是selected的值
+                window.location.href="{:U('Series/index')}&cl_id="+p1+"";//页面跳转并传参
+            })
+        })(jQuery);
+
+
+        !(function($){
+            $('.td-lesson01, .td-lesson02').on('mouseenter', function(e) {
+                if($(this).children('.limit-cur').text().length > 8) {
+                    $(this).children('.limit-all').stop().show('fast');
+                }
+            }).on('mouseleave', function(e) {
+                $(this).children('.limit-all').stop().hide('fast');
+            });
+        })(jQuery);
+</script>
+</block>

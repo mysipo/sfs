@@ -1,0 +1,470 @@
+<!doctype html>
+<html xmlns:gs="http://www.gensee.com/ec">
+<head>
+<meta charset="utf-8">
+<title>直播</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<!--[if lte IE 9]>
+<script src="http://i3.tuanimg.com/pub/lib/html5shiv.min.js"></script>
+<![endif]-->
+<script src="__HOMEJS__jquery1.7.2.min.js"></script>
+<script src="__HOMEJS__h2h.js"></script>
+<script type="text/javascript" src="http://static.gensee.com/webcast/static/sdk/js/gssdk.js"></script>
+<link href="http://static.gensee.com/webcast/static/sdk/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="__HOMECSS__style.css" rel="stylesheet"/>
+<link rel="icon" href="__PUBLIC__/static/home/images/sbxy.ico">
+<script type="text/javascript">
+    //1. 根据组获得通讯通道
+    var channel = GS.createChannel();
+    //用户列表获取
+    channel.bind("onUserList", function (event) {
+        //console.log(event.data);
+
+        $.each(event.data.list,function(index,element){
+            index=index+1;
+            if(element.role != "16"){
+                $(".zhibo .area .jiaoliu .con .chat select").append('<option receiverid="'+element.chatid+'" value="'+index+'" class="option">'+element.name+"老师"+'</option>')
+            }else{
+                if(element.name !=$("#name").val()){
+                    $(".zhibo .area .jiaoliu .con .chat select").append('<option receiverid="'+element.chatid+'" value="'+index+'" class="option">'+element.name+'</option>')
+                }
+            }
+        })
+    });
+    //新增用户
+    channel.bind("onUserJoin", function (event) {
+        //console.log(event.data);
+        $.each(event.data.list,function(index,element){
+            index=index+1;
+            var obj = $(".option");
+            var i = 0;
+            $.each(obj,function(s){
+                if(element.name==obj[s].innerHTML){
+                    i = 1;
+                };
+            })
+            if(i==0){
+                if(element.role != "16"){
+                    $(".zhibo .area .jiaoliu .con .chat select").append('<option receiverid="'+element.chatid+'" value="'+index+'" class="option">'+element.name+"老师"+'</option>')
+                }else{
+                    if(element.name !=$("#name").val()){
+                        $(".zhibo .area .jiaoliu .con .chat select").append('<option receiverid="'+element.chatid+'" value="'+index+'" class="option">'+element.name+'</option>')
+                     }
+                }
+            }
+            
+        })
+    });
+    /*用户离开*/
+    channel.bind("onUserLeave", function (event){
+        $.each(event.data.list,function(k,v){
+            $('.zhibo .area .jiaoliu .con .chat select option[receiverid='+v.chatid+']"').remove();
+        })
+
+     })
+
+    //通过通道监听公聊信息
+    channel.bind("onPublicChat", function (event) {
+        $(".zhibo .area .jiaoliu .con .log").append('<p><img src="__HOMEIMG__ren.png" alt=""><em class="name">'+event.data.sender+'说：</em><em>'+event.data.richtext+'</em></p>');
+    });
+    //通过通道监听私聊信息
+    channel.bind("onPriChat", function (event) {
+        $(".zhibo .area .jiaoliu .con .log").append('<p><img src="__HOMEIMG__ren.png" alt=""><em class="name">'+event.data.sender+'对我说：</em><em>'+event.data.richtext+'</em></p>');
+    });
+    
+    //监听问答消息
+    channel.bind("onQA", function (event) {
+       //console.log(event.data);
+    });
+    //历史问答消息
+    channel.bind("onQAList", function (event) {
+       //console.log("问题列表"+event.data);
+    });
+    //在线人数
+    channel.bind("onUserOnline", function (event){
+        $("#useronline").html(event.data.count);
+    })
+
+    //获取调查问卷
+    channel.bind("onVote", function (event){
+        console.log("问卷ID"+event.data.id);
+        console.log("问卷列表"+event.data.skip);
+        console.log("问卷标题"+event.data.subject);
+       
+         var obj = event.data.questions;
+        $.each(obj,function(i){
+            // console.log("问题ID"+element.id);
+            // console.log("问题标题"+element.subject);
+            // console.log("问题分数"+element.score);
+            // console.log("问题正确答案"+element.answer);
+            // console.log("问题答案ID"+element.items.id);
+            // console.log("问题答案ID"+element.items.option);
+            $.each(sobj = obj[i],function(s){
+                console.log(s+'--'+sobj[s])
+
+            })
+        })
+    })
+
+    //获取调查结果
+    channel.bind("onVoteResult", function (event){
+        
+    })
+
+    channel.bind("onQA", function (event){
+
+        var sobj = event.data;
+        $.each(sobj,function(s){
+                console.log(s+'--'+sobj[s])
+
+        })
+    })
+
+
+    // //3.通过通道提问，提问，私聊，公聊的提交可以设置回调函数，同时resultInfo的格式为//{result:true|false,data:data},data即为提交的数据
+    // channel.send("submitRollcall", {
+    // "id" : 23534677685687
+    // },function(resultInfo){
+    // });
+    // // 4.通过通道提交点名信息
+    // channel.send("submitQuestion", {
+    // "content" : "what's your name?"
+    // });
+
+    $(function(){
+        
+     /*===================================================================================*/
+        //表情发送事件
+        $(".zhibo .area .jiaoliu .con .chat .add_icon").click(function(){
+            $(".zhibo .area .jiaoliu .con .chat .icon").toggle();
+        })
+        $(".zhibo .area .jiaoliu .con .chat .icon img").click(function(){
+            $(this).parent().hide();
+            var url='<img src="__HOMEIMG__icon/';
+            var arrimg=['emotion.smile.gif">','emotion.angerly.gif">','emotion.bs.gif">','emotion.bz.gif">','emotion.cry.gif">','emotion.gg.gif">','emotion.goodbye.gif">','emotion.gz.gif">','emotion.hx.gif">','emotion.jk.gif">','emotion.jy.gif">','emotion.kb.gif">','emotion.kl.gif">','emotion.lh.gif">','emotion.ll.gif">','emotion.nod.gif">','emotion.qd.gif">','emotion.qh.gif">','emotion.qq.gif">','emotion.question.gif">','emotion.rb.gif">','emotion.se.gif">','emotion.tx.gif">','emotion.xu.gif">','emotion.yun.gif">','feedback.against.gif">','feedback.agreed.png">','feedback.applaud.png">','feedback.quickly.png">','feedback.slowly.png">','feedback.think.png">','rose.down.png">','rose.up.png">','chat.gift.png">','emotion.fd.gif">','emotion.laugh.gif">'];
+
+
+            var arr_img=['$^nh^','$^fn^','$^qm^','$^bz^','$^sx^','$^gg^','$^zj^','$^ps^','$^hx^','$^jk^','$^jy^','$^kb^','$^kl^','$^lh^','$^ll^','$^wl^','$^qd^','$^qh^','$^qq^','$^yw^','$^rb^','$^se^','$^tx^','$^xu^','$^yun^','$^fd^','$^zt^','$^gz^','$^tk^','$^tm^','$^sk^','$^dx^','$^xh^','$^lw^','$^fed^','$^gx^'];
+            var arr_img_to=arr_img[$(this).index()];
+            var img=url+arrimg[$(this).index()];
+            // var img='<img src="http://static.gensee.com/webcast/static/emotion/emotion.smile.gif"/>';
+            $(".zhibo .area .jiaoliu .con .chat select :selected").each(function(){
+                if($(this).index()==0){
+                    //提交公聊信息    
+                    channel.send("submitChat", {
+                    "richtext" :arr_img_to,
+                    "security":"high"
+                    });
+                    $(".zhibo .area .jiaoliu .con .log").append('<p><img src="__HOMEIMG__ren.png" alt=""><em class="name">我说：</em><em>'+img+'</em></p>');
+                }else{
+                    //提交私聊信息    
+                    channel.send("submitChatTo", {
+                    "receiverId": $(this).attr("receiverid"), 
+                    "richtext" :arr_img_to, 
+                    "security":"high"
+                    });
+                    $(".zhibo .area .jiaoliu .con .log").append('<p><img src="__HOMEIMG__ren.png" alt=""><em class="name1">我对</em><em class="name">'+$(this).text()+'说：</em><em>'+img+'</em></p>');
+                }
+
+            })
+
+        })
+     /*======================================================================================*/
+        //点击发送按钮发送消息
+        $(".zhibo .area .jiaoliu .con .chat button").click(function(){
+            var data = $(".zhibo .area .jiaoliu .con .chat textarea").val();
+            if(data==""){
+                alert("输入内容不能为空");
+            }else{
+                sendmsg(data);
+            }
+            // $(".zhibo .area .jiaoliu .con .chat textarea").val("");
+            setTimeout(function(){
+                $(".zhibo .area .jiaoliu .con .chat textarea").val("");
+            },1)
+
+            $('.zhibo .area .jiaoliu .con .log').scrollTop( $('.zhibo .area .jiaoliu .con .log')[0].scrollHeight )
+
+        })
+        //按enter
+        $(".zhibo .area .jiaoliu .con .chat textarea").keydown(function(event){  
+            var keycode = (event.keyCode ? event.keyCode : event.which);  
+            if(keycode == '13'){  
+                $(".zhibo .area .jiaoliu .con .chat button").trigger("click");
+            }
+        });  
+        //发消息
+        function sendmsg(msg){
+            $(".zhibo .area .jiaoliu .con .chat select :selected").each(function(){
+                if($(this).index()==0){
+                    //提交公聊信息    
+                    channel.send("submitChat", {
+                    "richtext" : msg
+                    });
+                    $(".zhibo .area .jiaoliu .con .log").append('<p><img src="__HOMEIMG__ren.png" alt=""><em class="name">我说：</em><em>'+msg+'</em></p>');
+                }else{
+                    //提交私聊信息    
+                    channel.send("submitChatTo", {
+                    "receiverId": $(this).attr("receiverid"),   
+                    "richtext" : msg
+                    });
+
+                    $(".zhibo .area .jiaoliu .con .log").append('<p><img src="__HOMEIMG__ren.png" alt=""><em class="name1">我对</em><em class="name">'+$(this).text()+'说：</em><em>'+msg+'</em></p>');
+                }
+            })
+        }
+    })
+    $(function(){
+
+        /*直播页面*/
+        $(".zhibo .area .video .b .all .pingfen p .out").one("click",function(){
+            $(this).siblings(".in").show();
+            $(".zhibo .area .video .b .all .pingfen p .out").unbind("click");
+           
+        })
+        /*举手答题*/
+        $(".js_handsup").click(function(){
+            if($(this).find("p").html()=="举手答题"){
+                $(this).find("p").html("已举手");
+                $("#hand").attr('src',"__HOMEIMG__handsup2.png");
+                channel.send("submitHandup", {
+                    "handup" : true
+                });
+            }else{
+                $(this).find("p").html("举手答题");
+                $("#hand").attr('src',"__HOMEIMG__handsup.png");
+                channel.send("submitHandup", {
+                    "handup" : false
+                });
+            }
+        })
+
+        /*切换视图*/
+        /*
+        $(".js_change").toggle(function(){
+            $(".zhibo .area .video .r").css({"width":"207px","height":"140px","right":"0px","top":"0px"});
+            $(".zhibo .area .video .r .videoDiv ").css({"width":"218px","height":"148px"});
+            $(".zhibo .area .video .l .lt .docDiv").css({"width":"478px","height":"330px","left":"244px","top":"56px"})
+        },function(){
+            $(".zhibo .area .video .r").css({"width":"100%","height":"auto","left":"0px","top":"0px"});
+            $(".zhibo .area .video .r .videoDiv ").css({"width":"100%","height":"auto"});
+            $(".zhibo .area .video .l .lt .docDiv").css({"width":"220px","height":"150px","top":"56px","left":"10px"})
+        })*/
+
+        var $videoCon = $(".zhibo .area .video .r"),
+            $docVideo = $(".zhibo .area .video .l");
+
+        $(".js_change").toggle(function(){
+
+            $videoCon.css({"width":187,"height":140,"right":0,"top":84,'left':'auto','z-index':998});
+            $docVideo.css({"width" : "100%", "height" : document.documentElement.clientHeight-144});
+            $('#sbxy_vidgd').height(140);
+
+        }, function(){
+
+            document.getElementById("sbxy_vidgd").style.height=document.documentElement.clientHeight-144+"px";
+            $videoCon.css({"width":"100%","height":"auto","right":"auto","left":0,"z-index":1});
+            $docVideo.css({
+                "width" : 187,
+                "height" : 140
+            });
+        });
+    })
+    
+    /*切换视频*/
+
+    $(function(){
+        $('#btn_sxt').click(function(){
+            $div1=$('#div_sxt');
+            if($div1.is(':hidden')){
+                $div1.show();
+            }else if($div1.is(':visible')){
+                $div1.hide();
+            }
+            if($(this).find("p").html()=="关闭视频"){
+                $(this).find("p").html("打开视频");
+                $(this).find("img").attr('src',"__HOMEIMG__change_ton2.png");
+                
+            }else{
+                $(this).find("p").html("关闭视频");
+                $(this).find("img").attr('src',"__HOMEIMG__change_ton.png");
+                
+            }
+        });
+
+
+    });
+</script>
+
+
+</head>
+<body>
+     	<div id="sbxy_conk" class="zhibo" >
+            <div class="area">
+                <div id="sbxy_vidgd2" class="video">
+                    <div class="title">
+                    	<div class="logo">
+                        	<img src="__HOMEIMG__sbxy_zblogo.png">
+                            <img src="http://www.mysipo.com/uc_server/avatar.php?uid={$data.tch_id}&size=small" style="width:58px; height:58px;margin-top:-3px;margin-left:15px;">
+                        </div>
+                        <div class="sbxy_txt">
+                            <p class="txt1">{$data.live_title} </p>
+                        	<p class="txt2">{$data.live_type} </p>
+                        </div>
+                        <div class="sbxy_right">
+                            <div class="txt1">
+                            <img src="__HOMEIMG__zhibo_sbxywx.jpg">
+                            </div>
+                            <div class="txt2">
+                            关注思博学院<br>
+                            微信服务平台
+                            </div>
+                           
+                        </div>
+                    </div> 
+                    <div class="l" id="div_sxt">
+                        <div class="lt">
+                            <!-- <img src="__HOMEIMG__lt.jpg" alt=""> -->
+                            <div class="docDiv">
+                                <!-- Video Widget -->
+                                
+                                <gs:video-live site="mysipo.gensee.com"  ctx="training" ownerid="{$data.live_key}" uid="100000000{$user.id}" authcode="{$data.live_stu_key}" uname="{$user.name}"/>
+                                 <!-- <div style="width:100%; height:100%; background:#093;">
+                                </div> -->
+                               
+                            </div>
+                           
+                        </div>        
+                    </div>
+                    <div class="r">
+                        <!-- Video Widget -->
+                        <div id="sbxy_vidgd" class="videoDiv">
+                             <!-- Doc Widget -->
+                                <gs:doc site="mysipo.gensee.com" ctx="training" id="sbxy_gs" ownerid="{$data.live_key}" fullscreen="true"/>
+                            
+                        </div>
+                        <input type="hidden" id="name" value="{$user.name}" />
+                    </div>
+                    <div class="b">
+                        <div class="all">
+                            <div class="choose1 change1 " id="btn_sxt">
+                                <img src="__HOMEIMG__change_ton.png" alt="">
+                                <p>关闭视频</p>
+                            </div>
+                            <div class="choose change js_change">
+                                <img src="__HOMEIMG__change.png" alt="">
+                                <p>切换视频</p>
+                            </div>
+                            <div class="choose handsup js_handsup">
+                                <img src="__HOMEIMG__handsup.png" alt="" id="hand">
+                                <p>举手答题</p>
+                            </div>
+                            <div class="choose pingfen js_pingfei" id="pingfen" val="{$like.val}">
+                                <img src="__HOMEIMG__pingfen{$like.val}.png" alt="" id="likeimg" >
+                                <p>（<span id="like">{$like.number}</span>）</p>
+                            </div>
+
+                            <script type="text/javascript">
+                                $("#pingfen").click(function(){
+                                    if($(".pingfen").attr('val')==2){
+                                        return false;
+                                    }
+                                    $("#like").html(parseInt($("#like").html())+1);
+                                    $("#likeimg").attr('src',"__HOMEIMG__pingfen2.png");
+                                    $(".pingfen").attr('val',"2");
+                                    $.post('/Index/pingfen',{id : "{$data.live_id}"},function(data){
+                                    })
+                                })
+                            </script>
+                                
+                           
+                        </div>
+                    </div>
+                </div>
+                <div id="sbxy_plgd" class="jiaoliu">
+                    <div class="tip">
+                        
+                        <div class="tip_img"><img src="__HOMEIMG__sbxy_jltb.png" ></div>
+                        <p class="tit">互动交流</p>
+                        <div class="tit2">
+                            <img src="__HOMEIMG__pingfen1_zxrs.png">在线（<span id="useronline">1</span>）
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="log" id="sbxy_lol">
+                            <!-- <p><img src="__HOMEIMG__ren.png" alt=""><em class="name">我说：</em><em>跟我一起联考吧？</em></p> -->
+                           
+                        </div>
+                        <div class="chat" id="sbxy_txthi">
+                            <div class="icon">
+                                <img src="__HOMEIMG__icon/emotion.smile.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.angerly.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.bs.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.bz.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.cry.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.gg.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.goodbye.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.gz.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.hx.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.jk.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.jy.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.kb.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.kl.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.lh.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.ll.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.nod.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.qd.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.qh.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.qq.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.question.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.rb.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.se.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.tx.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.xu.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.yun.gif" alt="">
+                                <img src="__HOMEIMG__icon/feedback.against.gif" alt="">
+                                <img src="__HOMEIMG__icon/feedback.agreed.png" alt="">
+                                <img src="__HOMEIMG__icon/feedback.applaud.png" alt="">
+                                <img src="__HOMEIMG__icon/feedback.quickly.png" alt="">
+                                <img src="__HOMEIMG__icon/feedback.slowly.png" alt="">
+                                <img src="__HOMEIMG__icon/feedback.think.png" alt="">
+                                <img src="__HOMEIMG__icon/rose.down.png" alt="">
+                                <img src="__HOMEIMG__icon/rose.up.png" alt="">
+                                <img src="__HOMEIMG__icon/chat.gift.png" alt="">
+                                <img src="__HOMEIMG__icon/emotion.fd.gif" alt="">
+                                <img src="__HOMEIMG__icon/emotion.laugh.gif" alt="">
+                            </div>
+                            <img class="add_icon" src="__HOMEIMG__biaoqing.png" alt="">
+                           
+                            <textarea name="" id="" cols="30" rows="10" style="resize: none;" onchange="this.value=this.value.substring(0, 140)" onkeydown="this.value=this.value.substring(0, 140)" onkeyup="this.value=this.value.substring(0, 140)"></textarea>
+                            <select name="" id="">
+                                <option value="0"  class="option">所有人</option>
+                            </select>
+                            <button>发送</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+window.onload=function (){
+function auto_height()
+{
+document.getElementById("sbxy_conk").style.height=document.documentElement.clientHeight-1+"px";
+document.getElementById("sbxy_vidgd").style.height=document.documentElement.clientHeight-144+"px";
+document.getElementById("sbxy_gs").style.height=document.documentElement.clientHeight-144+"px";
+
+document.getElementById("sbxy_vidgd2").style.height=document.documentElement.clientHeight-15+"px";
+document.getElementById("sbxy_plgd").style.height=document.documentElement.clientHeight-1+"px";
+document.getElementById("sbxy_txthi").style.height=document.documentElement.clientHeight-280+"px";
+document.getElementById("sbxy_lol").style.height=document.documentElement.clientHeight-250+"px";
+}
+
+auto_height();
+onresize=auto_height;
+}
+</script> 
+</body>
+</html>

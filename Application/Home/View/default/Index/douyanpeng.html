@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <meta name="keywords" content="专利代理人课程|专利代理人公开课|思博学院官网|思博学院" />
+
+    <meta name="description" content="思博学院专利代理人公开课,为专利代理人提供最好的专利培训公开课程.
+" />
+
+    <link rel="icon" href="__PUBLIC__/static/home/images/sbxy.ico">
+
+
+
+    <title>专利代理人公开课-专利代理人培训|专利代理人课程-思博学院官网</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="__HOMECSS__bootstrap.min.css" rel="stylesheet">
+
+    <link href="__HOMECSS__bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="__HOMECSS__sbxy2016.css" rel="stylesheet" type="text/css">
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+
+    <!--[if lt IE 9]><script src="../../assets/__HOMEJS__ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <script src="__HOMEJS__ie-emulation-modes-warning.js"></script>
+
+
+
+    <!--[if lte IE 9]>
+
+    <script src="__HOMEJS__html5.js"></script>
+
+    <script src="__HOMEJS__respond.min.js"></script>
+
+    <![endif]-->
+
+    
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+    <script src="__HOMEJS__ie10-viewport-bug-workaround.js"></script>
+
+    <!-- js -->
+
+    <script src="__HOMEJS__jquery.js"></script>
+
+    <script src="__HOMEJS__bootstrap.min.js"></script>
+
+    <script src="__HOMEJS__menu.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="__HOMEJS__sbxy_jdt.js"></script>
+
+    <script type="text/javascript" src="__HOMEJS__huojian.js"></script>
+
+    <!--[if lte IE 6]>
+
+    <script type="text/javascript" src="__HOMEJS__belatedPNG.js"></script>
+
+    <script type="text/javascript">
+
+        var __IE6=true;
+
+        DD_belatedPNG.fix('.logo img,.prev img,.next img,img');
+
+    </script>
+
+    <![endif]-->
+    
+    <script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2016/03/8 20:00:00');
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+
+        document.getElementById("t_d").innerHTML = d+"天";
+        document.getElementById("t_h").innerHTML = h+"时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+    }
+    setInterval(getRTime,1000);
+    </script> 
+
+  </head>
+
+
+
+<body style="background:#fff;">
+
+<!--  顶部开始--> 
+
+
+
+    <div id="n1" class="top_sbxy hidden-xs hidden-sm" > 
+
+        <div class="container">
+
+            <div class="logo">
+
+                <img src="__PUBLIC__/static/home/images/sbxy_logo.jpg">
+
+            </div>
+
+            <div class="nav_sbxy">
+
+                <ul>
+
+                    <li> <a href="http://s.mysipo.com">首页</a></li>
+
+                    <li> <a href="/Index/kecheng">职业培训</a></li>
+
+                    <li> <a href="#" class="down">公开课</a></li>
+
+                    <li> <a href="http://s.mysipo.com/#n3">讲师介绍</a></li>
+
+                </ul>
+
+            </div>
+
+            
+
+   <!--  登陆前状态--> 
+
+    <if condition="!$user or $user.id eq ''" > 
+
+
+
+    <div class="right hidden-xs hidden-sm">
+
+
+
+            <ul class="ulr">
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/member/reg/"  target="_self">注册</a>
+
+
+
+                </li>
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/member/login/"  target="_self">登录</a>
+
+
+
+                </li>
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/Thirdparty/qqlogin/"  target="_self" class="qq"> </a>
+
+
+
+                </li>
+
+                
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/Weixinlogin/weixin_login/"  target="_self" class="weix"> </a>
+
+
+
+                </li>
+
+
+
+                <li>
+
+
+
+                    <a href="http://user.mysipo.com/Thirdparty/sinalogin/"  target="_self" class="weibo"> </a>
+
+
+
+                </li>
+
+
+
+            </ul>
+
+
+
+        </div>
+
+
+
+    <else />
+
+
+
+        <!-- 登陆后状 -->
+
+
+
+        <div class="left hidden-xs hidden-sm">
+
+
+
+            <ul class="menu">
+
+
+
+                <li class="li_3"><a class="" href="http://user.mysipo.com"><img src="http://www.mysipo.com/uc_server/avatar.php?uid={$user.id}&size=small" style="width:40px; height:40px;margin-top:-3px;">  </a>
+
+
+
+                    <dl class="li_3_content">
+
+
+
+                        <dt></dt>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/plugin.php?id=team"><span>申请版主（签到中心）</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=space&do=friend"><span>好友</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/forum.php?mod=guide&view=my"><span>帖子</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=magic"><span>道具</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=medal"><span>勋章</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=space&do=favorite&view=me"><span>收藏</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=task"><span>任务</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/forum.php?mod=collection&op=my"><span>淘贴</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php"><span>动态</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/misc.php?mod=ranklist"><span>排行榜</span></a></dd>
+
+
+
+                        <dd><a href="http://home.mysipo.com/home.php?mod=spacecp"><span>设置</span></a></dd>
+
+
+
+                        <dd><a href="http://bbs.mysipo.com/member.php?mod=logging&amp;action=logout&amp;formhash=ec98622e" target="_self"><span>退出</span></a></dd>
+
+
+
+
+
+
+
+                    </dl>
+
+
+
+                </li>
+
+
+
+            </ul> 
+
+
+
+        </div>
+
+
+
+    </if> 
+
+
+
+            
+
+        </div>   
+
+    </div>
+
+<!--顶部结束--> 
+
+<!--手机顶部--> 
+
+<div class="container hidden-lg">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mytab" aria-expanded="false">
+
+                    <span class="sr-only">Toggle navigation</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <a class="navbar-brand" href="#"><img src="__PUBLIC__/static/home/images/photo_logo.png" height="25em"></a>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="mytab">
+
+                <ul class="nav navbar-nav">
+
+                    <li class="active" role="presentation"><a href="http://s.mysipo.com" >首页</a></li>
+
+                    <li role="presentation"><a href="/Index/kecheng" >职业培训</a></li>
+
+                    <li role="presentation"><a href="#" class="down">公开课</a></li>
+
+                    <li role="presentation"><a href="http://s.mysipo.com/#n3">讲师介绍</a></li>
+
+                    
+
+
+                </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav> 
+
+</div>    
+
+  <!--  手机顶部结束-->   
+
+	<div class="con_kecen">	
+    	<div class="container">
+            <div class="js_con">
+            	<div class="lef">
+                	<img src="__PUBLIC__/static/home/images/douyanpeng_ppt1.png">
+                </div>
+                <div class="rig">
+                	<div class="txt">
+                    	<h2>不授予专利权的客体详解</h2>
+                        <p><strong>时间：</strong>3月8日（周二）20:00-22:00</p>
+                        <p><strong>地点：</strong>全宇宙网络直播</p>
+                        <p><strong>主讲：</strong>原国知局专利审查员 窦艳鹏</p>
+                        <p><strong>费用：</strong><b>免费 (思博会员登录即可进入)</b></p>
+                        <p class="p1">
+                        	本课程通过大量的案例对发明、实用新型的“客体”问题作了详细介绍和解释，特别适合专利代理行业、企业IPR的初级和中级从业人员观看学习。通过收看本课程，从业者将加深对专利“客体”问题的理解，并能够在撰写过程中采取恰当的规避措施。<br>
+                            咨询助理：QQ <a target="_blank" href="tencent://message/?uin=2850873350&Menu=yes">2850873350</a> / 电话 18010022696
+                        </p>
+                    </div>
+                    <div class="butt">
+                    	<!-- <a href="http://s.mysipo.com/show/45.html" class="but1" target="_blank">立即进入</a> -->
+                        <a href="" class="but2" style="margin-top:-15px;">
+                            <span id="t_d">00天</span>
+                            <span id="t_h">00时</span>
+                            <span id="t_m">00分</span>
+                            <span id="t_s">00秒</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- 课程开始 -->
+	
+<!-- 课程开始 -->
+	<div class="gaozhi_sbxy">	
+    	<div class="container"> 
+        	<div class="lef">
+            	<div class="title">
+                    <span class="tit">课程简介</span>
+                 </div>
+                 <div class="txt">
+                    <img src="__PUBLIC__/static/home/images/douyanpeng_ppt2.png">
+                    <img src="__PUBLIC__/static/home/images/douyanpeng_ppt3.png">
+                    <img src="__PUBLIC__/static/home/images/douyanpeng_ppt4.png">
+                 </div>
+             
+            </div>  
+            <div class="rig">        
+                 <div class="title">
+                    <span class="tit">课程大纲</span>
+                 </div>
+                 <div class="txt">
+                    <ul>
+                        <li><span class="span1">·</span> 相关法条概述</li>
+                       <li class="li1"><span class="span1">·</span>  科学发现</li>
+                        <li><span class="span1">·</span> 智力活动的规则和方法－－处理方式</li>
+                        <li class="li1"><span class="span1">·</span> 涉及计算机程序的发明专利申请的审查</li>
+                        <li><span class="span1">·</span> 疾病的诊断方法</li>
+                        <li class="li1"><span class="span1">·</span> 不属于治疗方法的发明</li>
+                        <li><span class="span1">·</span> 动物和植物的生产方法</li>
+                        <li class="li1"><span class="span1">·</span> 原子核变换方法以及用该方法获得的物质</li>
+                        <li><span class="span1">·</span> 对平面印刷品的图案、色彩或者二者的结合作出的主要起标识作用的设计</li>
+                        <li class="li1"><span class="span1">·</span> 违反法律的发明创造</li>
+                        <li><span class="span1">·</span> 违反社会公德的发明创造</li>
+                        <li class="li1"><span class="span1">·</span> 妨害公共利益的发明创造</li>
+                        <li><span class="span1">·</span> 违反法律、行政法规的规定获取或者利用遗传资源，并依赖该遗传资源完成的发明创造</li>
+                        <li class="li1"><span class="span1">·</span> 大量的案例分析</li>
+                    </ul>
+                 </div>
+             </div>   
+        </div>
+    </div>
+
+
+<div class="footers ">
+<div class="container">
+	<div class="footer_con">
+         <div class="Friendly hidden-xs hidden-sm">
+         	<h3 class="Footer_tit">
+                友情链接
+            </h3>
+            <ul>
+            	<li><a href="http://www.cnipr.com/" target="_blank">中国知识产权网</a></li>
+                <li><a href="http://www.8hy.org/" target="_blank"> 衡阳</a></li>
+                <li><a href="http://www.tmmark.com/" target="_blank">中国商标网</a></li>
+                <li><a href="http://www.jidian365.com/" target="_blank">极点网</a></li>
+                <li><a href="http://www.fffffw.com/" target="_blank">伍福文化</a></li>
+                <li><a href="http://www.wdy.com/" target="_blank">微电影网</a></li>
+                <li><a href="http://chongqing.liebiao.com/" target="_blank">重庆列表网</a></li>
+                <li><a href="http://www.berui.com/" target="_blank">合肥房产网</a></li>
+                <li><a href="http://www.yz53.com/" target="_blank">禹州在线</a></li>
+                <li><a href="http://www.tsingming.com/" target="_blank">中国清明网</a></li>
+                <li><a href="http://www.51offer.com/" target="_blank">英国留学</a></li>
+                <li><a href="http://yangzhou.focus.cn/" target="_blank">扬州房产信息网</a></li>
+                <li><a href="http://www.liuxue315.edu.cn/" target="_blank">出国留学</a></li>
+                <li><a href="http://www.0755lvs.cn/" target="_blank">深圳专利律师</a></li>
+                <li><a href="http://www.ipcoo.cn/" target="_blank">专利布局</a></li>
+                <li><a href="http://www.kzhihui.com/" target="_blank">知识产权服务</a></li>
+                <li><a href="http://www.gbicom.cn/" target="_blank">中国商标网</a></li>
+                <li><a href="http://www.lawyermr.com/" target="_blank">深律网</a></li>
+                <li><a href="http://www.wtoip.com" target="_blank">商标转让</a></li>
+                <li><a href="http://www.1633.com" target="_blank">技术交易平台</a></li>
+                <li><a href="http://www.idcicp.com" target="_blank">网络品牌保护</a></li>
+                <li><a href="http://www.shangbiaomyd.com" target="_blank">商标注册</a></li>
+                <li><a href="http://www.chen7782.com" target="_blank">注册商标</a></li>
+                <li><a href="http://www.fenxianggou.cc" target="_blank">科技创意</a></li>
+                <li><a href="http://www.qihaoip.com" target="_blank">7号网</a></li>
+                <li><a href="http://ipr.zbj.com/" target="_blank">八戒知识产权</a></li>
+            </ul>
+         </div>
+         <div class="clear"> </div>
+         <div class="end">
+         	   <div class="Houses"> 
+   				 © 2013-2016 北京思博知网科技有限公司<br>
+                 思博网 ( 京ICP备12050374号 京公安备11010802012124)
+               </div>	
+         </div>
+         
+    </div>
+  </div>  
+</div>
+<div class="huojian">
+ <!-- 返回顶部代码 开始 -->
+<div style="display:none;" id="rocket-to-top">
+	<div style="opacity:0;display:block;" class="level-2"></div>
+	<div class="level-3"></div>
+</div>
+</div>
+<!-- 代码 结束 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?8c6de5932bed397c45a36a716c38d952";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> 
+</body>
+</html>

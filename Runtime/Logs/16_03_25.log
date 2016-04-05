@@ -1,0 +1,587 @@
+[ 2016-03-25T18:35:45+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Video/add.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000784s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000338s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Video/add%' ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000562s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000833s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000276s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000176s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.000510s ]
+
+[ 2016-03-25T18:35:48+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Video/add.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000705s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000315s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Video/add%' ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000424s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000666s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000225s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000469s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class`  [ RunTime:0.000154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2016-03-25T18:36:15+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Playvideo/index.html&cate_id=45
+ERR: 无法加载控制器:Playvideo
+
+[ 2016-03-25T18:36:19+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Series/index.html&cate_id=45
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000700s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000318s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Series/index%' ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000407s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000612s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000208s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000176s ]
+SQL: SHOW COLUMNS FROM `lesson_series` [ RunTime:0.000481s ]
+NOTIC: [8] Undefined variable: where /alidata/www/phpwind/mysipo_video/Application/Admin/Controller/SeriesController.class.php 第 27 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_series` LIMIT 1   [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `lesson_series` [ RunTime:0.000498s ]
+SQL: SELECT ser.*,bbs.username,class.cl_title FROM lesson_series ser INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN lesson_class class  WHERE ( ser.uid = bbs.uid ) AND ( ser.cl_id = class.cl_id ) ORDER BY ser.ser_sort desc,ser.ser_id desc LIMIT 0,10   [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000459s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000357s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000430s ]
+
+[ 2016-03-25T18:36:24+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Video/add.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000712s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000333s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Video/add%' ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000408s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000607s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000227s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000173s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.000522s ]
+
+[ 2016-03-25T18:36:52+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Playlive/Index.html&cate_id=45
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000721s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000337s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000413s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000598s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000209s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.000648s ]
+NOTIC: [8] Undefined variable: where /alidata/www/phpwind/mysipo_video/Application/Admin/Controller/PlayliveController.class.php 第 27 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.000545s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000465s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000165s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2016-03-25T18:36:54+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Playlive/add.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000719s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000337s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000426s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000233s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000599s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000209s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000185s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000438s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000186s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022880s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2016-03-25T18:36:55+08:00 ] 61.50.123.26 /mysipo_video/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000630s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.000575s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1458902215 ) AND ( deadline = 0 OR deadline > 1458902215 ) ORDER BY `id` DESC  [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.000457s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000201s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2016-03-25T18:37:00+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/File/uploadPicture/session_id/qv3bemju4o10aijuj3dd5im127.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000700s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000338s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%File/uploadpicture%' ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000405s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000234s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000643s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000208s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000196s ]
+SQL: SHOW COLUMNS FROM `lesson_picture` [ RunTime:0.000472s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `lesson_picture` WHERE ( `md5` = '580ea6c9523ab5570347653979c06f36' ) AND ( `sha1` = '77d72ce6575a0a60e9d5e2338b1be6bc9a653db0' ) LIMIT 1   [ RunTime:0.000202s ]
+SQL: INSERT INTO `lesson_picture` (`md5`,`sha1`,`path`,`status`,`create_time`) VALUES ('580ea6c9523ab5570347653979c06f36','77d72ce6575a0a60e9d5e2338b1be6bc9a653db0','/Uploads/Picture/2016-03-25/56f514cceb296.jpg',1,1458902220) [ RunTime:0.000217s ]
+
+[ 2016-03-25T18:37:01+08:00 ] 180.153.201.24 /mysipo_video/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000617s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.000581s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1458902221 ) AND ( deadline = 0 OR deadline > 1458902221 ) ORDER BY `id` DESC  [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.000464s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000182s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2016-03-25T18:37:12+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2016-03-25T18:37:12+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2016-03-25T18:37:18+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_ucenter_members` [ RunTime:0.000763s ]
+SQL: SELECT * FROM `lesson_ucenter_members` WHERE ( `username` = '山大王' ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: UPDATE `lesson_ucenter_members` SET `lastlogintime`=1458902238,`lastloginip`=1026718490 WHERE ( `uid` = 109053 ) [ RunTime:0.005755s ]
+NOTIC: [8] Undefined index: db_dsn /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db.class.php 第 130 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `mys_common_member` [ RunTime:0.000661s ]
+SQL: SELECT `uid`,`username`,`adminid` FROM `mys_common_member` WHERE ( `uid` = 109053 ) LIMIT 1   [ RunTime:0.000202s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_action` [ RunTime:0.000485s ]
+SQL: SELECT * FROM `lesson_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000169s ]
+SQL: SHOW COLUMNS FROM `lesson_member` [ RunTime:0.000487s ]
+SQL: SELECT `nickname` FROM `lesson_member` WHERE ( `uid` = 109053 ) LIMIT 1   [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `lesson_action_log` [ RunTime:0.000469s ]
+SQL: INSERT INTO `lesson_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,109053,1026718490,'member',109053,1458902238,'在2016-03-25 18:37登录了后台') [ RunTime:0.000258s ]
+SQL: SELECT * FROM `lesson_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000169s ]
+NOTIC: [8] Undefined offset: 1 /alidata/www/phpwind/mysipo_video/Application/Common/Common/function.php 第 669 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /alidata/www/phpwind/mysipo_video/Application/Common/Common/function.php 第 669 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 109053 ) AND ( `create_time` > 1458815838 ) LIMIT 1   [ RunTime:0.000297s ]
+
+[ 2016-03-25T18:37:19+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Index/index.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000721s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000317s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Index/index%' ) LIMIT 1   [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000534s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 1 )  [ RunTime:0.000188s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 1 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.000232s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000446s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000621s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000207s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000175s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `lesson_addons` [ RunTime:0.000483s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000197s ]
+SQL: SHOW COLUMNS FROM `lesson_ucenter_members` [ RunTime:0.000549s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_ucenter_members` LIMIT 1   [ RunTime:0.023103s ]
+SQL: SHOW COLUMNS FROM `lesson_action_log` [ RunTime:0.000873s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_action_log` LIMIT 1   [ RunTime:0.000134s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.000554s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_document` LIMIT 1   [ RunTime:0.000114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_category` LIMIT 1   [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `lesson_model` [ RunTime:0.000541s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_model` LIMIT 1   [ RunTime:0.000112s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031115s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.001521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run SiteStat [ RunTime:0.030679s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000238s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.068427s ]
+SQL: select version() as v; [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002347s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.035460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.037705s ]
+INFO: Run SystemInfo [ RunTime:0.037729s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.068466s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002518s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.035460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.037874s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-03-25T18:37:40+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Live/mydocument.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000718s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000310s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Live/mydocument%' ) LIMIT 1   [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000473s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 2 )  [ RunTime:0.000221s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.000199s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '内容' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000208s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000422s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000674s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000451s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000200s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.000552s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 109053 ) AND ( `pid` = 0 ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 109053 ) AND ( `pid` = 0 ) ORDER BY update_time desc LIMIT 0,10   [ RunTime:0.000330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.017478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2016-03-25T18:37:43+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Theme/index.html&cate_id=45
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000790s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000318s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Theme/index%' ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000428s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000613s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000205s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000177s ]
+SQL: SHOW COLUMNS FROM `lesson_theme` [ RunTime:0.000511s ]
+NOTIC: [8] Undefined variable: where /alidata/www/phpwind/mysipo_video/Application/Admin/Controller/ThemeController.class.php 第 27 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_theme` LIMIT 1   [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `lesson_theme` [ RunTime:0.000878s ]
+SQL: SELECT t.*,bbs.username,class.cl_title FROM lesson_theme t INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN lesson_class class  WHERE ( t.uid = bbs.uid ) AND ( t.cl_id = class.cl_id ) ORDER BY t.t_sort desc,t.t_id desc LIMIT 0,10   [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000626s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000226s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.021572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2016-03-25T18:37:46+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Playlive/Index.html&cate_id=45
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000705s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000312s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000418s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000228s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000605s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000204s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.000559s ]
+NOTIC: [8] Undefined variable: where /alidata/www/phpwind/mysipo_video/Application/Admin/Controller/PlayliveController.class.php 第 27 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.000184s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.000519s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000434s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000182s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2016-03-25T18:37:47+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Playlive/add.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000709s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000315s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000403s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000617s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000207s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000464s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000164s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2016-03-25T18:37:59+08:00 ] 61.50.123.26 /mysipo_video/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000620s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.000551s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1458902279 ) AND ( deadline = 0 OR deadline > 1458902279 ) ORDER BY `id` DESC  [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.000463s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000183s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-03-25T18:38:04+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/File/uploadPicture/session_id/9achs4m711t7i27fnm52j00se4.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000696s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000315s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%File/uploadpicture%' ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000459s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000233s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000612s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `lesson_picture` [ RunTime:0.000456s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `lesson_picture` WHERE ( `md5` = '9971b035154f5c54948b73a86d6c6874' ) AND ( `sha1` = 'f243257cfede886e8111117a63051703e56d22fe' ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: INSERT INTO `lesson_picture` (`md5`,`sha1`,`path`,`status`,`create_time`) VALUES ('9971b035154f5c54948b73a86d6c6874','f243257cfede886e8111117a63051703e56d22fe','/Uploads/Picture/2016-03-25/56f5150c8eaa0.png',1,1458902284) [ RunTime:0.000210s ]
+
+[ 2016-03-25T18:38:23+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/File/uploadPicture/session_id/9achs4m711t7i27fnm52j00se4.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000741s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000340s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%File/uploadpicture%' ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000407s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000647s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `lesson_picture` [ RunTime:0.000440s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `lesson_picture` WHERE ( `md5` = '17089bddb24c26ac437870bca9acd3ba' ) AND ( `sha1` = '49f2fa79d14eaacb9738838cbd2baa10e63af849' ) LIMIT 1   [ RunTime:0.000241s ]
+
+[ 2016-03-25T18:38:57+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Series/add_live/id/24.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000715s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000338s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Series/add_live%' ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000411s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000587s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000210s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000176s ]
+SQL: SHOW COLUMNS FROM `lesson_series` [ RunTime:0.000483s ]
+SQL: SELECT `ser_id`,`ser_title` FROM `lesson_series` WHERE ( `ser_id` = 24 ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `lesson_series_class` [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `lesson_series_class` [ RunTime:0.000434s ]
+SQL: SELECT lv.live_id,lv.live_title,ser.live_type,author.username,ser.sc_time,ser.sc_id FROM lesson_series_class ser INNER JOIN lesson_live lv INNER JOIN mysipo_bbs.mys_common_member author  WHERE ( ser.ser_id = 24 and lv.live_id=ser.live_id and ser.uid = author.uid and ser.live_type = 1 ) ORDER BY ser.sc_id desc  [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.000637s ]
+SQL: SELECT `live_id`,`live_title` FROM `lesson_live`  [ RunTime:0.000249s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.021927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-03-25T18:39:05+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Playlive/Index.html&cate_id=45
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000728s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000317s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000403s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000597s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000207s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000184s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.000575s ]
+NOTIC: [8] Undefined variable: where /alidata/www/phpwind/mysipo_video/Application/Admin/Controller/PlayliveController.class.php 第 27 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.000193s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.000556s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000466s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000167s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2016-03-25T18:39:11+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/Playlive/add.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000722s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000338s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000402s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000593s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000206s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.000488s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-03-25T18:39:11+08:00 ] 61.50.123.26 /mysipo_video/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000935s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.000558s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1458902351 ) AND ( deadline = 0 OR deadline > 1458902351 ) ORDER BY `id` DESC  [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.000473s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000322s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004680s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2016-03-25T18:39:27+08:00 ] 61.50.123.26 /mysipo_video/index.php?s=/Admin/File/uploadPicture/session_id/9achs4m711t7i27fnm52j00se4.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /alidata/www/phpwind/mysipo_video/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.000715s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.000315s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%File/uploadpicture%' ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.000425s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='109053' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.000234s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.000612s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `lesson_picture` [ RunTime:0.000439s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `lesson_picture` WHERE ( `md5` = '7f7807622b3c06e18c4b84a7404bd564' ) AND ( `sha1` = '206b27a0ce437b90f127bdd4ee0d366efc68cf65' ) LIMIT 1   [ RunTime:0.000209s ]
+
