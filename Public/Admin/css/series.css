@@ -1,0 +1,39 @@
+/*
+* @Author: 山大王
+* @Date:   2016-03-25 11:43:19
+* @Last Modified by:   山大王
+* @Last Modified time: 2016-03-25 12:03:59
+*/
+body {
+    margin: 0;
+}
+.auto_hidden {
+    width:400px;
+    border: 1px solid rgb(142, 142, 142);
+    position:absolute;
+    display:none;
+}
+.auto_show {
+    width:400px;
+    border: 1px solid rgb(168, 168, 168);
+    position:absolute;
+    z-index:9999; /* 设置对象的层叠顺序 */
+    display:block;
+}
+.auto_onmouseover{
+    color:#ffffff;
+    background-color:#7963df;
+    width:100%;
+    padding: 3px 0;
+}
+.auto_onmouseout{
+    color:#000000;
+    width:100%;
+    background-color: rgb(255, 255, 255);
+    padding: 3px 0;
+}
+
+.select-lesson {
+    float: left;
+    margin-right: 10px;
+}

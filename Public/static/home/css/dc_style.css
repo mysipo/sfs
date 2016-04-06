@@ -1,0 +1,226 @@
+/*公用文件*/
+@import url(base.css);
+
+/*医生个人中心--我的课程*/
+header .area .text{font-size: 14px;width: 308px;margin-left: 688px;height: 25px;padding-top: 23px;color: #8f8f8f;}
+header .area .hello{width: 153px;float: left;}
+header .area .selfcenter{width: 83px;margin-left: 134px;float: left;margin-top: -19px;border:1px solid #ccc;padding-left: 8px;position: relative;  line-height: 21px;}
+header .area .selfcenter p{font-size: 14px;padding-top: 0; position:relative;float: left; width: 83px;}
+header .area .selfcenter p em{float: left;color: #8f8f8f;}
+header .area .selfcenter p .list{position: absolute;right: 5px;top: 5px;}
+header .area .selfcenter p .new,header .area .selfcenter p .new1{position:absolute;right:18px; top:5px;}
+header .area .selfcenter .my_msg{display: none;cursor: pointer;}
+header .area .selfcenter:hover .my_msg{display: block;}
+header .area .out{border:1px solid #ccc;height: 21px;background: #efefef;cursor: pointer;float: left; margin:-19px 0 0 10px;padding:0 2px;}
+header .area .out img{padding: 0 5px 0 5px;float: none;margin-top:3px;}
+header .area .out em{vertical-align: top}
+.area .dc_center .title{background: #338bdb;height: 50px;}
+.area .dc_center .title ul{color: #fff;font-size: 16px;margin-left: 18px;width: 360px;float: left;}
+.area .dc_center .title ul li{float: left;line-height: 51px;margin-right: 20px;height: 40px;cursor: pointer;}
+.area .dc_center .title ul li.cur{border-bottom: 3px solid #fff;}
+.area .dc_center .title ul li a{color: #fff;}
+.area .dc_center .title .jc_but{margin-left: 769px;padding-top: 12px;}
+.area .dc_center .title .jc_but img{cursor: pointer;}
+.area .dc_center .kc_tip{font-size: 14px;color: #999999;margin-top: 10px;}
+.area .dc_center .kc_tip em{cursor: pointer;width: 44px;padding: 0 18px;}
+.area .dc_center .kc_tip em.cur{color: #338bdb;}
+/*医生个人中心--直播课程*/
+.area .dc_center .kc_zhibo{display: none;}
+.area .dc_center .kc_zhibo .search{background: #efefef;height: 53px;font-size: 16px;margin-top: 8px;position: relative;}
+.area .dc_center .kc_zhibo .search label{margin-left: 18px;float: left;line-height: 53px;}
+.area .dc_center .kc_zhibo .search p{background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .dc_center .kc_zhibo .search input{font-size: 16px;color:#4e4e4e;background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .dc_center .kc_zhibo .search p.begin{}
+.area .dc_center .kc_zhibo .search p.end{}
+.area .dc_center .kc_zhibo .search p.status{}
+.area .dc_center .kc_zhibo .search .select_status{position: absolute;top: 43px;left: 642px;background: #fff;border: 1px solid #e1e8e8;width: 260px;display: none;}
+.area .dc_center .kc_zhibo .search .select_status li{cursor: pointer;border-bottom:1px solid #e1e8e8;height: 29px;text-align: center; }
+.area .dc_center .kc_zhibo .search .go{background: #188cca;width: 60px;height: 30px;border-radius: 3px;cursor: pointer;margin-left: 10px;}
+.area .dc_center .kc_zhibo .search .go img{vertical-align: middle}
+.area .dc_center .kc_zhibo table{text-align: center;border-right: 1px solid #e1e8e8;border-bottom: 1px solid #e1e8e8;color:#656565;width: 1000px;margin-top: 15px;}
+.area .dc_center .kc_zhibo table thead{}
+.area .dc_center .kc_zhibo table thead tr{height: 30px;}
+.area .dc_center .kc_zhibo table thead th{border-left: 1px solid #e1e8e8;border-top: 1px solid #e1e8e8;font-weight: normal;}
+.area .dc_center .kc_zhibo table tbody td{border-left: 1px solid #e1e8e8;border-top: 1px solid #e1e8e8;}
+.area .dc_center .kc_zhibo table tbody tr{height: 28px;}
+.area .dc_center .kc_zhibo table tbody tr td.timu{font-weight: bold;}
+.area .dc_center .kc_zhibo table tbody tr td a{color: #188cca;}
+.area .dc_center .kc_zhibo table tbody .zhuti{text-align: left;}
+.area .dc_center .kc_zhibo table tbody .go{color: #2a8010;}
+.area .dc_center .kc_zhibo table tbody .caozuo button{margin: 2px 0 0 2px;font-size: 12px;}
+.area .dc_center .kc_zhibo table tbody .zhuangtai{cursor: pointer;}
+.area .dc_center .kc_zhibo table tbody .zhuangtai:hover{color: #f00;}
+
+
+
+/*医生个人中心--录播课程*/
+.area .dc_center .kc_lubo{}
+.area .dc_center .kc_lubo .search{background: #efefef;height: 53px;font-size: 16px;margin-top: 8px;position: relative;}
+.area .dc_center .kc_lubo .search label{margin-left: 18px;float: left;line-height: 53px;}
+.area .dc_center .kc_lubo .search p{background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .dc_center .kc_lubo .search input{font-size: 16px;color:#4e4e4e;background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .dc_center .kc_lubo .search p.begin{}
+.area .dc_center .kc_lubo .search p.end{}
+.area .dc_center .kc_lubo .search p.status{}
+.area .dc_center .kc_lubo .search .select_status{position: absolute;top: 43px;left: 642px;background: #fff;border: 1px solid #e1e8e8;width: 260px;display: none;}
+.area .dc_center .kc_lubo .search .select_status li{cursor: pointer;border-bottom:1px solid #e1e8e8;height: 29px;text-align: center; }
+.area .dc_center .kc_lubo .search .go{background: #188cca;width: 60px;height: 30px;border-radius: 3px;cursor: pointer;margin-left: 10px;}
+.area .dc_center .kc_lubo .search .go img{vertical-align: middle}
+.area .dc_center .kc_lubo table{text-align: center;border-right: 1px solid #e1e8e8;border-bottom: 1px solid #e1e8e8;color:#656565;width: 1000px;margin-top: 15px;}
+.area .dc_center .kc_lubo table thead{}
+.area .dc_center .kc_lubo table thead tr{height: 30px;}
+.area .dc_center .kc_lubo table thead th{border-left: 1px solid #e1e8e8;border-top: 1px solid #e1e8e8;font-weight: normal;}
+.area .dc_center .kc_lubo table tbody td{border-left: 1px solid #e1e8e8;border-top: 1px solid #e1e8e8;}
+.area .dc_center .kc_lubo table tbody tr{height: 28px;}
+.area .dc_center .kc_lubo table tbody tr td.timu{font-weight: bold;}
+.area .dc_center .kc_lubo table tbody tr td a{color: #188cca;}
+.area .dc_center .kc_lubo table tbody tr td.upload{text-align: left;padding-left: 21px;}
+.area .dc_center .kc_lubo table tbody tr td.upload a span{color: #ff5c50;}
+.area .dc_center .kc_lubo table tbody tr td.upload a span.statu{color: #4e4e4e;}
+.area .dc_center .kc_lubo table tbody tr td a .upload_ico{  vertical-align: -2px;margin-right: 7px;}
+.area .dc_center .kc_lubo table tbody tr td.action{font-weight: bold;}
+.area .dc_center .kc_lubo table tbody tr .zhuangtai{cursor: pointer;}
+.area .dc_center .kc_lubo table tbody tr .zhuangtai:hover{color: #f00;}
+
+/*医生个人中心--医生足迹*/
+.area .dc_center .dc_zj{height: 41px;background: #efefef;line-height: 41px;padding-left: 15px;font-size: 16px;margin-top: 10px;border: 1px solid #e1e8e8;}
+.area .dc_center .dc_zj img{padding-top: 10px;float: left;margin-right: 10px;}
+.area .dc_center .dc_zj .tip{color: #f00;font-size: 14px;border-right: 1px solid #e1e8e8;width: 69px;float: left;}
+.area .dc_center .dc_zj em{color: #f00;}
+.area .dc_center .dc_zj .total{padding-left: 110px;}
+/*医生个人中心--我的消息*/
+.area .dc_center .mymsg{border:1px solid #ccc;margin-top: 15px;overflow:hidden;}
+.area .dc_center .mymsg .content{padding:15px 0 5px 15px;border-bottom: 1px solid #000;position: relative;margin-bottom: -2px}
+.area .dc_center .mymsg .content p{margin-bottom: 5px;}
+.area .dc_center .mymsg .content .tit{font-size: 16px;color: #000;font-weight: bold;}
+.area .dc_center .mymsg .content .time{font-size: 14px;}
+.area .dc_center .mymsg .content .msg{font-size: 14px;}
+
+
+/*助教个人中心--*/
+.area .zj_center .title{background: #338bdb;height: 50px;}
+.area .zj_center .title ul{color: #fff;font-size: 16px;margin-left: 18px;width: 360px;float: left;}
+.area .zj_center .title ul li{float: left;line-height: 51px;margin-right: 20px;height: 40px;cursor: pointer;}
+.area .zj_center .title ul li.cur{border-bottom: 3px solid #fff;}
+.area .zj_center .title .jc_but{margin-left: 769px;padding-top: 12px;}
+.area .zj_center .title .jc_but img{cursor: pointer;}
+.area .zj_center .kc_tip{font-size: 14px;color: #999999;margin-top: 10px;}
+.area .zj_center .kc_tip em{cursor: pointer;width: 44px;padding: 0 18px;}
+.area .zj_center .kc_tip em.cur{color: #338bdb;}
+.area .zj_center .kc{}
+.area .zj_center .kc .search{background: #efefef;height: 53px;font-size: 16px;margin-top: 8px;position: relative;}
+.area .zj_center .kc .search label{margin-left: 18px;float: left;line-height: 53px;}
+.area .zj_center .kc .search p{background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .zj_center .kc .search input{font-size: 16px;color:#4e4e4e;background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .zj_center .kc .search p.begin{}
+.area .zj_center .kc .search p.end{}
+.area .zj_center .kc .search p.status{}
+.area .zj_center .kc .search .select_status{z-index: 999;position: absolute;top: 43px;left: 642px;background: #fff;border: 1px solid #e1e8e8;width: 260px;display: none;}
+.area .zj_center .kc .search .select_status li{cursor: pointer;border-bottom:1px solid #e1e8e8;height: 29px;text-align: center; }
+.area .zj_center .kc .search .go{background: #188cca;width: 60px;height: 30px;border-radius: 3px;cursor: pointer;margin-left: 10px;}
+.area .zj_center .kc .search .go img{vertical-align: middle}
+.js_zhujiao_inf{display: none;}
+/*助教个人中心--我的消息*/
+.area .zj_center .mymsg{border:1px solid #ccc;margin-top: 15px;display: none;}
+.area .zj_center .mymsg .content{padding:15px 0 0 15px;border-bottom: 1px solid;}
+.area .zj_center .mymsg .content p{margin-bottom: 5px;}
+.area .zj_center .mymsg .content .tit{font-size: 16px;color: #000;font-weight: bold;}
+.area .zj_center .mymsg .content .time{font-size: 14px;}
+.area .zj_center .mymsg .content .msg{font-size: 14px;}
+
+/*录播--信息提交页面*/
+.area .dc_center .lb_tip{font-size: 16px;margin: 15px 0 0 10px;}
+.area .dc_center .lubo_info{border: 1px solid #c4c4c4;line-height: 2.0;padding: 20px 0 0 20px;margin-top: 10px;font-size: 16px;}
+.area .dc_center .lubo_info p{padding-bottom: 15px;}
+.area .dc_center .lubo_info input{border: 1px solid #c4c4c4;border-radius: 3px;font-size: 16px;color: #848484;height: 36px;padding-left: 10px;}
+.area .dc_center .lubo_info label{width: 90px;}
+.area .dc_center .lubo_info .lb_left{width: 86px;float: left;line-height: 36px;}
+.area .dc_center .lubo_info .lb_right{}
+.area .dc_center .lubo_info .lb_right textarea{width: 496px;color:#848484;font-size: 16px;padding-left: 10px; }
+.area .dc_center .lubo_info .lb_right span img{display: none;margin-left: 10px;}
+.area .dc_center .lubo_info .lb_right .lbcourse_title{width: 500px;height: 39px;color: #848484;font-size: 16px;}
+.area .dc_center .lubo_info .lb_right .lbcourse_title option{width: 500px;height: 39px;color: #848484;font-size: 16px;line-height: 39px;}
+
+.area .dc_center .lubo_action{margin-top: 20px;line-height: 3.0;}
+.area .dc_center .lubo_action p{text-align: center;}
+.area .dc_center .lubo_action .lubo_shenqing{width: 360px;height: 57px;background: #f04a4a;border: 0;border-radius: 3px;color: #fff;font-size: 16px;margin-left: 316px;}
+.area .dc_center .lubo_action img{display: none;margin-left: 10px;}
+
+/*医生个人主页完善个人银行信息*/
+.dc_bankinf{position: absolute;display: none;width: 375px;height: 300px;z-index: 999;font-size: 18px;color: #292929;background: #fff;padding: 20px 25px 0 25px;line-height: 2.0;}
+.dc_bankinf .wanshan{background: #f04a4a;width: 260px;height: 40px;border-radius: 3px;margin:40px 0 20px 57px;text-align: center;cursor: pointer;}
+.dc_bankinf .buwanshan{background: #7d7d7d;width: 260px;height: 40px;border-radius: 3px;margin:20px 0 20px 57px;text-align: center;cursor: pointer;}
+/*课程评价表标准*/
+.kc_biaozhun{width: 375px;height: 300px;position: absolute;display: none;z-index: 999;background: #fff;text-align: center;}
+.kc_biaozhun h2{margin-top:20px; }
+.kc_biaozhun p{width: 280px;text-align: center;border: 1px solid #7d7d7d;color: #292929;}
+.kc_biaozhun table{border-right: 1px solid #7d7d7d;border-bottom: 1px solid #7d7d7d;color:#7d7d7d;margin: 10px auto;}
+.kc_biaozhun table tr{height: 36px;}
+.kc_biaozhun table td{border-left: 1px solid #7d7d7d;border-top: 1px solid #7d7d7d;width: 80px;}
+.kc_biaozhun table .biaotou{font-weight: bold;color: #292929;width: 84px;}
+.kc_biaozhun button{width: 250px;height: 40px;background: #7d7d7d;border: 0px;margin-top:10px;color: #fff;font-size: 18px; }
+
+/*医生个人中心 --我的课程 ---直播 --修改时间*/
+.dc_change_kctime{width: 380px;position: absolute;background: #fff;display: none;z-index: 999;color: #6d6c6c;}
+.dc_change_kctime .tit{font-size: 18px;color: #292929;text-align: center;margin: 10px auto;}
+.dc_change_kctime .tips{width: 286px;margin: 10px auto;font-size: 14px;}
+.dc_change_kctime .info{width: 286px;margin: 10px auto;font-size: 14px;}
+.dc_change_kctime .info textarea{width: 286px;height: 150px;margin: 0 auto;}
+.dc_change_kctime .action{width: 260px;height: 42px;background: #7d7d7d;text-align: center;font-size: 16px;margin: 5px auto;color: #fff;line-height: 42px;}
+.dc_change_kctime .do{background: #7d7d7d;}
+.dc_change_kctime .cancel{background: #f04a4a;}
+
+/*医生个人中心 --我的课程 ---录播 --- 上传视频*/
+.upload_dialog{width: 264px;display: none;position: absolute;z-index: 999;background: #fff;text-align: center;padding:26px 58px;border: 1px solid #939393;}
+.upload_dialog .close{position: absolute;top: 4px;right: 4px;cursor: pointer;}
+.upload_dialog p{font-size: 18px;color: #292929;}
+.upload_dialog #file_upload{margin: 16px 0;}
+
+.upload_dialog .do_up{width: 123px;height: 40px;background: #d0d0d0;float: left;line-height: 40px;color: #555555;cursor: pointer;font-size: 16px;}
+.upload_dialog .do_cancel{width: 123px;height: 40px;background: #eeeeee;float: right;margin-right: 5px;line-height: 40px;color: #555555;cursor: pointer;font-size: 16px;}
+
+/*患者个人中心--观看记录*/
+
+.area .hz_center .title{background: #338bdb;height: 50px;}
+.area .hz_center .title ul{color: #fff;font-size: 16px;margin-left: 18px;width: 360px;float: left;}
+.area .hz_center .title ul li{float: left;line-height: 51px;margin-right: 20px;height: 40px;cursor: pointer;}
+.area .hz_center .title ul li.cur{border-bottom: 3px solid #fff;}
+.area .hz_center .title ul li a{color: #fff;}
+.area .hz_center .title .jc_but{margin-left: 769px;padding-top: 12px;}
+.area .hz_center .title .jc_but img{cursor: pointer;}
+.area .hz_center .kc_tip{font-size: 14px;color: #999999;margin-top: 10px;}
+.area .hz_center .kc_tip em{cursor: pointer;width: 44px;padding: 0 18px;}
+.area .hz_center .kc_tip em.cur{color: #338bdb;}
+.area .hz_center .guankanjilu{}
+
+.area .hz_center .guankanjilu .search{background: #efefef;height: 53px;font-size: 16px;margin-top: 8px;position: relative;border: 1px solid #dddddd;}
+.area .hz_center .guankanjilu .search label{margin-left: 18px;float: left;line-height: 53px;}
+.area .hz_center .guankanjilu .search p{background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .hz_center .guankanjilu .search input{font-size: 16px;color:#4e4e4e;background: #fff;border: 1px solid #e1e8e8;width: 260px;height: 29px;float: left;margin: 12px 10px 0 0;line-height: 29px;text-align: center;cursor: pointer;}
+.area .hz_center .guankanjilu .search p.begin{}
+.area .hz_center .guankanjilu .search p.end{}
+.area .hz_center .guankanjilu .search p.status{}
+.area .hz_center .guankanjilu .search .select_status{position: absolute;top: 43px;left: 642px;background: #fff;border: 1px solid #e1e8e8;width: 260px;display: none;}
+.area .hz_center .guankanjilu .search .select_status li{cursor: pointer;border-bottom:1px solid #e1e8e8;height: 29px;text-align: center; }
+.area .hz_center .guankanjilu .search .go{background: #188cca;width: 60px;height: 30px;border-radius: 3px;cursor: pointer;margin-left: 10px;}
+.area .hz_center .guankanjilu .content{border: 1px solid #ddd;margin-top: 15px;}
+.area .hz_center .guankanjilu .content .list{margin: 15px -20px 0px;position: relative;}
+.area .hz_center .guankanjilu .content .list .detail{height: 210px;float: left;margin:0 34px;}
+.area .hz_center .guankanjilu .content .list .detail img{width: 277px; height: 173px;}
+.area .hz_center .guankanjilu .content .list .detail p{width:268px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+<extend name="Public/base"/>
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+<block name="body">
+	<div class="main-title">
+		<h2>{:isset($info['id'])?'编辑':'新增'}频道</h2>
+	</div>
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+			<form action="{:U()}" method="post" class="form-horizontal">
+				<!-- 基础 -->
+				<div id="tab1" class="tab-pane in tab1">
+					<div class="form-item">
+						<label class="item-label">
+							频道标题<span class="check-tips">（标题不能为空）</span>
+						</label>
+						<div class="controls">
+							<input type="text" name="cl_title" class="text input-large" value="{$info.cl_title|default=''}">
+						</div>
+					</div>
+			        <div class="form-item">
+						<label class="item-label">副标题</label>
+						<div class="controls">
+							<input type="text" name="cl_subtitle" class="text input-5x" value="{$info.cl_subtitle|default=''}">
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">排序</label>
+						<div class="controls">
+							<input type="text" name="cl_sort" class="text input-2x" value="{$info.cl_sort|default='0'}" onkeyup="if(/\D/.test(this.value)){this.value='';}" maxlength="4">
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">关键字</label>
+						<div class="controls">
+							<label class="textarea input-large">
+								<textarea name="cl_tag">{$info.cl_tag|default=''}</textarea>
+							</label>
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">描述</label>
+						<div class="controls">
+							<label class="textarea input-large">
+								<textarea name="cl_desc">{$info.cl_desc|default=''}</textarea>
+							</label>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="form-item">
+					<input type="hidden" name="cl_id" value="{$info.cl_id|default=''}">
+					<button type="submit" id="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+					<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">
+		<present name="info.cl_id">
+		Think.setValue("allow_publish", {$info.allow_publish|default=1});
+		Think.setValue("check", {$info.check|default=0});
+		Think.setValue("model[]", {$info.model|json_encode} || [1]);
+		Think.setValue("type[]", {$info.type|json_encode} || [2]);
+		Think.setValue("display", {$info.display|default=1});
+		Think.setValue("reply", {$info.reply|default=0});
+		Think.setValue("reply_model[]", {$info.reply_model|json_encode} || [1]);
+		</present>
+		$(function(){
+			showTab();
+			$("input[name=reply]").change(function(){
+				var $reply = $(".form-item.reply");
+				parseInt(this.value) ? $reply.show() : $reply.hide();
+			}).filter(":checked").change();
+		});
+		//导航高亮
+		highlight_subnav('{:U('Class/index')}');
+	</script>
+</block>

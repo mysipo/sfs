@@ -1,0 +1,287 @@
+<extend name="Public/base"/>
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+<block name="body">
+
+	<div class="main-title">
+		<h2>{:isset($info['id'])?'编辑':'人工新增'}订单</h2>
+	</div>
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+			<form action="{:U()}" method="post" class="form-horizontal">
+
+				<div id="tab1" class="tab-pane in tab1">
+
+					<div class="form-item cf ">
+						<label class="item-label">系列<span class="check-tips"></span></label>
+						<div class="controls">
+							<select name="lesson_type" class="input-5x form-all">
+								<option value="1" <if condition="$info.live_type eq 0">selected="selected"</if>>系列</option>
+								<option value="2" <if condition="$info.live_type neq 0">selected="selected"</if>>课程</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-select01">
+					  <div class="form-item cf">
+					  	<label class="item-label">课程系列<span class="check-tips"></span></label>
+					  	<div class="controls">
+					  		<select name="series_id" class="input-5x">
+					  			<volist name="series" id="series">
+					  				<option value="{$series.ser_id}" <if condition="$info.lesson_id eq $series.ser_id and $info.live_type eq 0">selected="selected"</if>>{$series.ser_title}</option>
+					  			</volist>
+					  		</select>
+					  	</div>
+					  </div>
+					</div>
+
+					<div class="form-select02" style="display: none;">
+
+				    <div class="form-item cf">
+				    	<label class="item-label">课程类型<span class="check-tips"></span></label>
+				    	<div class="controls">
+				    		<select name="live_type" class="input-5x form-two">
+				    			<option value="1" <if condition="$info.live_type eq 1">selected="selected"</if>>直播</option>
+								<option value="2" <if condition="$info.live_type eq 2">selected="selected"</if>>录播</option>
+				    		</select>
+				    	</div>
+				    </div>
+
+				    <div class="form-item cf form-select03">
+				    	<label class="item-label">直播课程<span class="check-tips"></span></label>
+				    	<div class="controls">
+				    		<select name="live_id" class="input-5x">
+				    			<volist name="live" id="live">
+					  				<option value="{$live.live_id}" <if condition="$info.lesson_id eq $live.live_id and $info.live_type eq 1">selected="selected"</if>>{$live.live_title}</option>
+					  			</volist>
+				    		</select>
+				    	</div>
+				    </div>
+
+						<div class="form-item cf form-select04" style="display: none;">
+				    	<label class="item-label">录播课程<span class="check-tips"></span></label>
+				    	<div class="controls">
+				    		<select name="video_id" class="input-5x">
+				    			<volist name="video" id="video">
+					  				<option value="{$video.video_id}" <if condition="$info.lesson_id eq $video.video_id and $info.live_type eq 2">selected="selected"</if>>{$video.title}</option>
+					  			</volist>
+				    		</select>
+				    	</div>
+				    </div>
+
+					</div>
+
+					<div class="form-item">
+						<label class="item-label">
+							付款人用户名<span class="check-tips">（用户名不能为空）</span>
+						</label>
+						<div class="controls">
+							<input type="text" name="uname" class="text input-5x" value="{$info.uname|default=''}">
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							付款人电话<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<input type="text" name="telphone" class="text input-5x" value="{$info.telphone|default=''}">
+						</div>
+					</div>
+
+					<div class="form-item cf" style="width:250px;float;left;">
+						<label class="item-label">支付渠道<span class="check-tips"></span></label>
+						<div class="controls" style="position: relative;">
+							<select name="pay_channels" class="input-small">
+								<option value="9" selected="selected">其他</option>
+								<option value="4">线下支付宝</option>
+								<option value="5">线下微信</option>
+								<option value="6">线下银行转账</option>
+								<option value="7">pos机刷卡</option>
+								<option value="8">现金支付</option>
+							</select>
+							<div class="cash" style="display: none;">
+								<span>点击填写银行信息</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							付款金额<span class="check-tips">（6位整数2位小数）</span>
+						</label>
+						<div class="controls">
+							<input type="text" name="pay_real" class="text input-4x" value="{$info.pay_real|default=''}" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="9">
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							手续费用<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<input type="text" name="pay_fee" value="{$payinfo.fee|default=''}" class="text input-4x" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="3">
+						</div>
+					</div>
+					<!-- <div class="form-item"  style="padding-bottom: 14px;margin-top:16px;">
+						<label class="item-label">
+							折扣<span class="check-tips">（默认不打折）</span>
+						</label>
+						<div class="controls">
+							<label class="inline radio"><input type="radio" name="dct_id" value="1" checked disabled>不打折</label>
+							<label class="inline radio"><input type="radio" name="dct_id" value="2"disabled>打折期</label>
+						</div>
+					</div> -->
+					<div class="form-item"  style="padding-bottom: 14px;margin-top:16px;">
+						<label class="item-label">
+							付款状态<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<label class="inline radio"><input type="radio" name="status" value="1" checked >未支付</label>
+							<label class="inline radio"><input type="radio" name="status" value="2" checked>已支付</label>
+							<label class="inline radio"><input type="radio" name="status" value="3">已退款</label>
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">描述</label>
+						<div class="controls">
+							<label class="textarea input-large">
+								<textarea name="description">{$info.description|default=''}</textarea>
+							</label>
+						</div>
+					</div>
+
+					<!-- 增加弹窗 -->
+	<div class="fixed-edit" style="display: none;">
+		<div class="fix-main">
+			<div class="fix-header">
+				<button type="button" class="close" id="close-btn"><span>×</span></button>
+          <h4 class="fix-title" >请填写银行卡信息</h4>
+			</div>
+			<div class="fix-box">
+				<div class="fix-item">
+					<label for="">开户银行</label>
+					<input type="text" class="fix-bank" name="bankname" value="{$payinfo.bankname|default=''}">
+				</div>
+				<div class="fix-item">
+					<label for="">开户姓名</label>
+					<input type="text" class="fix-bank" name="username" value="{$payinfo.username|default=''}">
+				</div>
+				<div class="fix-item">
+					<label for="">银行卡号</label>
+					<input type="text" class="fix-bank" name="card_id" value="{$payinfo.card_id|default=''}" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="18">
+				</div>
+				<div class="fix-item">
+					<label for="">描述备注</label>
+					<input type="text" class="fix-bank" name="note" value="{$payinfo.description|default=''}">
+				</div>
+				<input type="hidden" name="pay_id" value="{$payinfo.pay_id|default=''}">
+				<div class="fix-btn fix-item">
+					<label for=""></label>
+					<p>确认</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 弹窗end -->
+
+
+				</div>
+				<!-- btn submit-btn ajax-post -->
+				<div class="form-item">
+					<input type="hidden" name="order_on" value="{$info.order_on|default=''}">
+					<button type="submit" id="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+					<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">
+		<present name="info.order_on">
+		Think.setValue("ser_level", {$info.ser_level|default=2});
+		Think.setValue("dct_id", {$info.dct_id|default=0});
+		Think.setValue("lesson_id", {$info.lesson_id|default=1});
+		Think.setValue("pay_channels", {$info.pay_channels|default=1});
+		Think.setValue("status", {$info.status|default=2});
+		Think.setValue("reply_model[]", {$info.reply_model|json_encode} || [1]);
+		</present>
+
+		$(function(){
+			showTab();
+			$("input[name=reply]").change(function(){
+				var $reply = $(".form-item.reply");
+				parseInt(this.value) ? $reply.show() : $reply.hide();
+			}).filter(":checked").change();
+		});
+		/*导航高亮*/
+		highlight_subnav('{:U('Payinfo/index')}');
+
+
+			var selectAll = $('.form-all').val();
+
+			if(selectAll == '1') {
+				$('.form-select01').show().siblings('.form-select02').hide()
+			} else if(selectAll == '2') {
+				$('.form-select02').show().siblings('.form-select01').hide()
+			}
+
+		/*系列和课程切换*/
+		$('.form-all').change(function() {
+
+			var selectAll = $(this).val();
+
+			if(selectAll == '1') {
+				$('.form-select01').show().siblings('.form-select02').hide()
+			} else if(selectAll == '2') {
+				$('.form-select02').show().siblings('.form-select01').hide()
+			}
+		})
+
+		/*录播，直播*/
+		var selectTwo = $('.form-two').val();
+			if(selectTwo == '1') {
+				$('.form-two').parents('.form-item').siblings('.form-select03').show().siblings('.form-select04').hide()
+			} else if(selectTwo == '2') {
+				$('.form-two').parents('.form-item').siblings('.form-select04').show().siblings('.form-select03').hide()
+			}
+
+
+		$('.form-two').change(function() {
+			var selectTwo = $(this).val();
+			if(selectTwo == '1') {
+				$(this).parents('.form-item').siblings('.form-select03').show().siblings('.form-select04').hide()
+			} else if(selectTwo == '2') {
+				$(this).parents('.form-item').siblings('.form-select04').show().siblings('.form-select03').hide()
+			}
+		})
+
+
+		var selectSmall = $('.input-small').val();
+		$('.input-small').siblings('.cash').hide();
+		if(selectSmall == '6') {
+				$('.input-small').siblings('.cash').show();
+		}
+		/*点击显示银行填写信息*/
+		$('.input-small').change(function() {
+			var selectSmall = $(this).children('option:selected').val();
+			$(this).siblings('.cash').hide();
+			if(selectSmall == '6') {
+				$(this).siblings('.cash').show();
+			}
+		});
+
+		/*银行信息弹窗*/
+		$('.cash').on('click', function(e) {
+			$('.fixed-edit').css('display', 'block');
+		});
+		$('#close-btn, .fix-btn p').on('click', function() {
+			$('.fixed-edit').css('display', 'none');
+		});
+
+
+
+	</script>
+</block>
