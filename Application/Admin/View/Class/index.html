@@ -1,0 +1,101 @@
+<extend name="Public/base"/>
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+<block name="body">
+	<div class="main-title">
+		<h2>频道管理</h2>
+	</div>
+
+	<div class="cf clearfloat">
+		<a class="btn" href="{:U('add')}" style="">新 增</a>
+		<!-- <a class="btn" href="javascript:;">删 除</a> -->
+	</div>
+
+	<div class="data-table table-striped">
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>频道标题</th>
+					<th>系列</th>
+                    <th>专题</th>
+                    <th>直播</th>
+                    <th>录播</th>
+                    <!-- <th>排序</th> -->
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<notempty name="list">
+				<volist name="list" id="class">
+					<tr>
+						<td>{$class.cl_id}</td>
+						<td>{$class.cl_title}</td>
+						<td>{$class.series_num}</td>
+                        <td>{$class.theme_num}</td>
+                        <td>{$class.live_num}</td>
+                        <td>{$class.video_num}</td>
+                        <!-- <td width="200">
+                            <form action="{:U('edit')}" method="post">
+                                <div class="order"><input type="text" name="cl_sort" class="input-mini" value="{$class.cl_sort}" onkeyup="if(/\D/.test(this.value)){this.value='';}" maxlength="4"></div>
+                                <input type="hidden" name="cl_id" value="{$class.cl_id}">
+                                <input type="hidden" name="cl_title" value="{$class.cl_title}">
+                                <span class="help-inline msg" style="line-height:24px;margin-left:5px;color:#635c73;"></span>
+                            </form>
+
+                        </td> -->
+						<td>
+							<a title="编辑" href="{:U('edit?id='.$class['cl_id'])}">编辑</a>
+							<!-- <a class="confirm ajax-get" title="删除" href="{:U('del?id='.$class['cl_id'])}">删除</a> -->
+						</td>
+					</tr>
+				</volist>
+				<else/>
+				<td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td>
+				</notempty>
+			</tbody>
+		</table>
+	</div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+        (function($){
+            $(".data-table")
+                .on("submit", "form", function(){
+                    var self = $(this);
+                    $.post(
+                        self.attr("action"),
+                        self.serialize(),
+                        function(data){
+                            /* 提示信息 */
+                            var name = data.status ? "success" : "error", msg;
+                            msg = self.find(".msg").addClass(name).text(data.info)
+                                      .css("display", "inline-block");
+                            setTimeout(function(){
+                                msg.fadeOut(function(){
+                                    msg.text("").removeClass(name);
+                                });
+                            }, 1000);
+                        },
+                        "json"
+                    );
+                    return false;
+                })
+                .on("focus","input",function(){
+                    $(this).data('param',$(this).closest("form").serialize());
+
+                })
+                .on("blur", "input", function(){
+                    if($(this).data('param')!=$(this).closest("form").serialize()){
+                        $(this).closest("form").submit();
+                    }
+                });
+        })(jQuery);
+</script>
+</block>

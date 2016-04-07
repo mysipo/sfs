@@ -1,0 +1,292 @@
+<extend name="Public/base"/>
+<!-- 子导航 -->
+<block name="sidebar">
+    <include file="Public:sidemenu" />
+</block>
+
+
+<block name="body">
+	<div class="main-title">
+		<h2>系列课程</h2>
+	</div>
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+			<form action="{:U()}" method="post" class="form-horizontal" id="form1">
+				<div id="tab1" class="tab-pane in tab1">
+					<div class="form-item cf">
+						<input type="hidden" value="{$theme.t_id}" name="t_id">
+						<label class="item-label">主题标题<span class="check-tips">{$theme.t_title}</span></label>
+						<div class="controls">
+						    <div class="select-lesson" style>
+						    	<span>选择系列&nbsp;&nbsp;</span>
+						    	<select name="cl_id" class="input-small" id="cl_id">
+						    			<option value="0" selected="selected">全部</option>
+						    			<volist name="class" id="cl">
+						    			<option value="{$cl.cl_id}">{$cl.cl_title}</option>
+						    			</volist>
+						    	</select>
+						    	<select name="ser_level" class="input-small" id="ser_level">
+						    			<option value="0" selected="selected">全部</option>
+						    			<option value="1">初级</option>
+						    			<option value="2">中级</option>
+						    			<option value="3">高级</option>
+						    	</select>
+						    </div>
+						    <div class="search-inp">
+								<input type="text" name="ser_title" class="text input-5x" value="" placeholder="输入系列标题" id="o" onkeyup="autoComplete.start(event)" autocomplete="off">
+								<button type="submit" id="submit" class="btn ajax-post" target-form="form-horizontal">确 定</button>
+							</div>
+					    	<div class="auto_hidden" id="auto"><!--自动完成 DIV--></div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="data-table table-striped" style="width:60%;">
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>名称</th>
+					<th>状态</th>
+					<th>类型</th>
+                    <th>创建者</th>
+                    <th>创建时间</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<notempty name="series">
+				<volist name="series" id="ser">
+					<tr>
+						<td>{$ser.ser_id}</td>
+                        <td class="td-lesson01">
+                            <div class="limit-cur" style="">{$ser.ser_title}</div>
+                            <div class="limit-all" style="display: none;position: absolute;background: rgba(78,78,78,.9);z-index: 9;border: 1px solid #eee;padding: 3px 5px;border-radius: 4px;color: #fff;font-size: 12px;"><p>{$ser.sub_title}<p/></div>
+                        </td>
+						<td>
+							<switch name="ser.ser_key">
+                                <case value="1">默认</case>
+                                <case value="2">置顶</case>
+                                <case value="3">精华</case>
+                                <case value="4">活动</case>
+                                <case value="5">推广</case>
+                            </switch>
+						</td>
+						<td>
+							<switch name="ser.ser_level">
+                                <case value="1">初级</case>
+                                <case value="2">中级</case>
+                                <default />高级
+                            </switch>
+						</td>
+						<td>{$ser.username}</td>
+                        <td>{$ser.t_time|substr=0,10}</td>
+						<td>
+							<a class="confirm ajax-get" title="删除" href="{:U('del_live?id='.$ser['ti_id'])}">删除</a>
+						</td>
+					</tr>
+				</volist>
+				<else/>
+				<td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td>
+				</notempty>
+			</tbody>
+		</table>
+	</div>
+	</div>
+</block>
+
+<block name="script">
+	<script type="text/javascript">
+		//导航高亮
+		highlight_subnav('{:U('Playlive1/index')}');
+	</script>
+	<script src="__PUBLIC__/Admin/json/series.js"></script>
+	<script language="javascript">
+	//<!--
+	var $$ = function (id) {
+	    return "string" == typeof id ? document.getElementById(id) : id;
+	}
+	var Bind = function(object, fun) {
+	    return function() {
+	        return fun.apply(object, arguments);
+	    }
+	}
+	function AutoComplete(obj,autoObj,arr){
+	    this.obj=$$(obj);        //输入框
+	    this.autoObj=$$(autoObj);//DIV的根节点
+	    this.value_arr=arr;        //不要包含重复值
+	    this.index=-1;          //当前选中的DIV的索引
+	    this.search_value="";   //保存当前搜索的字符
+	}
+	AutoComplete.prototype={
+	    //初始化DIV的位置
+	    init: function(){
+	        this.autoObj.style.left = this.obj.offsetLeft + "px";
+	        this.autoObj.style.top  = this.obj.offsetTop + this.obj.offsetHeight + "px";
+	        this.autoObj.style.width= this.obj.offsetWidth - 2 + "px";//减去边框的长度2px
+	    },
+	    //删除自动完成需要的所有DIV
+	    deleteDIV: function(){
+	        while(this.autoObj.hasChildNodes()){
+	            this.autoObj.removeChild(this.autoObj.firstChild);
+	        }
+	        this.autoObj.className="auto_hidden";
+	    },
+	    //设置值
+	    setValue: function(_this){
+	        return function(){
+	            _this.obj.value=this.seq;
+	            _this.autoObj.className="auto_hidden";
+	        }
+	    },
+	    //模拟鼠标移动至DIV时，DIV高亮
+	    autoOnmouseover: function(_this,_div_index){
+	        return function(){
+	            _this.index=_div_index;
+	            var length = _this.autoObj.children.length;
+	            for(var j=0;j<length;j++){
+	                if(j!=_this.index ){
+	                    _this.autoObj.childNodes[j].className='auto_onmouseout';
+	                }else{
+	                    _this.autoObj.childNodes[j].className='auto_onmouseover';
+	                }
+	            }
+	        }
+	    },
+	    //更改classname
+	    changeClassname: function(length){
+	        for(var i=0;i<length;i++){
+	            if(i!=this.index ){
+	                this.autoObj.childNodes[i].className='auto_onmouseout';
+	            }else{
+	                this.autoObj.childNodes[i].className='auto_onmouseover';
+	                this.obj.value=this.autoObj.childNodes[i].seq;
+	            }
+	        }
+	    }
+	    ,
+	    //响应键盘
+	    pressKey: function(event){
+	        var length = this.autoObj.children.length;
+	        //光标键"↓"
+	        if(event.keyCode==40){
+	            ++this.index;
+	            if(this.index>length){
+	                this.index=0;
+	            }else if(this.index==length){
+	                this.obj.value=this.search_value;
+	            }
+	            this.changeClassname(length);
+	        }
+	        //光标键"↑"
+	        else if(event.keyCode==38){
+	            this.index--;
+	            if(this.index<-1){
+	                this.index=length - 1;
+	            }else if(this.index==-1){
+	                this.obj.value=this.search_value;
+	            }
+	            this.changeClassname(length);
+	        }
+	        //回车键
+	        else if(event.keyCode==13){
+	            this.autoObj.className="auto_hidden";
+	            this.index=-1;
+	        }else{
+	            this.index=-1;
+	        }
+	    },
+    //程序入口
+    start: function(event){
+        if(event.keyCode!=13&&event.keyCode!=38&&event.keyCode!=40){
+            this.init();
+            this.deleteDIV();
+            this.search_value=this.obj.value; //输入框的内容
+            var valueArr=this.value_arr;    // 数据数组
+            var self = this;
+            //先获取第一个select
+           	var clId =$("#cl_id option:selected").val();
+           	var serLevel =$("#ser_level option:selected").val();
+           	var reg_cl = new RegExp("(" + clId + ")","i");
+           	var reg_ser = new RegExp("(" + serLevel + ")","i");
+
+            if(this.obj.value.replace(/(^\s*)|(\s*$)/g,'') == ""){ return; }//值为空，退出
+
+            try{
+            	var reg = new RegExp("(" + this.obj.value + ")","i");
+            }
+            catch (e){
+                return;
+         	}
+
+            var div_index=0;//记录创建的DIV的索引
+            for(var i = 0; i < valueArr.length; i++){
+                  function selectLesson(lessonSingle) {
+                    if(lessonSingle){
+                        var div = document.createElement("div");
+                        div.className="auto_onmouseout";
+                        div.seq=valueArr[i].ser_title;
+                        div.onclick=self.setValue(self);
+                        div.onmouseover=self.autoOnmouseover(self,div_index);
+                        div.innerHTML=valueArr[i].ser_title;//搜索到的字符粗体显示
+                        self.autoObj.appendChild(div);
+                        self.autoObj.className="auto_show";
+                        div_index++;
+                    }
+                    if(div_index > 4) return;
+                }
+
+            	//此处判断
+                if( clId == 0 && serLevel == 0 ) {
+                  selectLesson(reg.test(valueArr[i].ser_title))
+                } else if ( clId == 0 && serLevel != 0) {
+                  selectLesson(reg.test(valueArr[i].ser_title) && reg_ser.test(valueArr[i].ser_level))
+                } else if ( clId != 0 && serLevel == 0) {
+                  selectLesson(reg.test(valueArr[i].ser_title) && reg_cl.test(valueArr[i].cl_id))
+                } else {
+                  selectLesson(reg.test(valueArr[i].ser_title) && reg_ser.test(valueArr[i].ser_level) && reg_cl.test(valueArr[i].cl_id))
+                }
+
+                function selectLesson(lessonSingle) {
+                    if(lessonSingle){
+                        var div = document.createElement("div");
+                        div.className="auto_onmouseout";
+                        div.seq=valueArr[i].ser_title;
+                        div.onclick=self.setValue(self);
+                        div.onmouseover=self.autoOnmouseover(self,div_index);
+                        div.innerHTML=valueArr[i].ser_title;//搜索到的字符粗体显示
+                        self.autoObj.appendChild(div);
+                        self.autoObj.className="auto_show";
+                        div_index++;
+                    }
+                    if(div_index > 4) return;
+                }
+            }
+        }
+        this.pressKey(event);
+        window.onresize=Bind(this,function(){this.init();});
+    }
+}
+//-->
+</script>
+<script>
+	// $(document).ready(function () {
+ //    $('#submit', this).attr('disabled', false);
+	// });
+	$('#form1').submit(function () {
+	  $('#submit', this).attr('disabled', false);
+	});
+	var autoComplete=new AutoComplete('o','auto', series);
+    !(function($){
+        $('.td-lesson01, .td-lesson02').on('mouseenter', function(e) {
+            if($(this).children('.limit-cur').text().length > 15) {
+                $(this).children('.limit-all').stop().show('fast');
+            }
+        }).on('mouseleave', function(e) {
+            $(this).children('.limit-all').stop().hide('fast');
+        });
+    })(jQuery);
+</script>
+</block>

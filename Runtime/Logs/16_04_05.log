@@ -1,0 +1,1776 @@
+[ 2016-04-05T10:43:37+08:00 ] 112.90.82.218 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000064s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-04-05T10:43:38+08:00 ] 101.226.68.215 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-04-05T10:43:39+08:00 ] 101.226.68.215 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.182364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.182536s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000197s ]
+
+[ 2016-04-05T10:43:42+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-04-05T10:43:58+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `mys_ucenter_members` [ RunTime:0.028231s ]
+SQL: SELECT * FROM `mys_ucenter_members` WHERE ( `username` = '杨先森' ) LIMIT 1   [ RunTime:0.026950s ]
+SQL: UPDATE `mys_ucenter_members` SET `lastlogintime`=1459824237,`lastloginip`=1026718490 WHERE ( `uid` = 107901 ) [ RunTime:0.026999s ]
+NOTIC: [8] Undefined index: db_dsn /mnt/data/web/mysipo_video/adminmanager/ThinkPHP/Library/Think/Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params /mnt/data/web/mysipo_video/adminmanager/ThinkPHP/Library/Think/Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mys_common_member` [ RunTime:0.002742s ]
+SQL: SELECT `uid`,`username`,`adminid` FROM `mys_common_member` WHERE ( `uid` = 107901 ) LIMIT 1   [ RunTime:0.001946s ]
+SQL: SHOW COLUMNS FROM `lesson_action` [ RunTime:0.027824s ]
+SQL: SELECT * FROM `lesson_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.026295s ]
+SQL: SHOW COLUMNS FROM `lesson_member` [ RunTime:0.027522s ]
+SQL: SELECT `nickname` FROM `lesson_member` WHERE ( `uid` = 107901 ) LIMIT 1   [ RunTime:0.030477s ]
+SQL: SHOW COLUMNS FROM `lesson_action_log` [ RunTime:0.027887s ]
+SQL: INSERT INTO `lesson_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,107901,1026718490,'member',107901,1459824237,'在2016-04-05 10:43登录了后台') [ RunTime:0.026914s ]
+SQL: SELECT * FROM `lesson_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.033330s ]
+NOTIC: [8] Undefined offset: 1 /mnt/data/web/mysipo_video/adminmanager/Application/Common/Common/function.php 第 669 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /mnt/data/web/mysipo_video/adminmanager/Application/Common/Common/function.php 第 669 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 107901 ) AND ( `create_time` > 1459737837 ) LIMIT 1   [ RunTime:0.031688s ]
+SQL: UPDATE `lesson_member` SET `score`=score+10 WHERE ( uid=107901 AND status>-1 ) [ RunTime:0.026293s ]
+
+[ 2016-04-05T10:43:58+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Index/index.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.028775s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026715s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Index/index%' ) LIMIT 1   [ RunTime:0.026353s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.028132s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.026363s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 2 )  [ RunTime:0.026374s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.027061s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '内容' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026372s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026353s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027469s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027091s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027407s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026409s ]
+
+[ 2016-04-05T10:44:00+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Live/mydocument.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027090s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026634s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Live/mydocument%' ) LIMIT 1   [ RunTime:0.026967s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027313s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.027802s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 2 )  [ RunTime:0.026469s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.026512s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '内容' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026579s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026524s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026886s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026691s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027715s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026593s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026904s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026644s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027089s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.027346s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 107901 ) AND ( `pid` = 0 ) LIMIT 1   [ RunTime:0.026539s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 107901 ) AND ( `pid` = 0 ) ORDER BY update_time desc LIMIT 0,10   [ RunTime:0.026731s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `lesson_addons` [ RunTime:0.029034s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.028922s ]
+SQL: SHOW COLUMNS FROM `lesson_action_log` [ RunTime:0.027203s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_action_log` LIMIT 1   [ RunTime:0.026547s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_category` LIMIT 1   [ RunTime:0.026674s ]
+SQL: SHOW COLUMNS FROM `lesson_model` [ RunTime:0.028279s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_model` LIMIT 1   [ RunTime:0.026495s ]
+SQL: SHOW COLUMNS FROM mysipo_bbs.mys_ucenter_members [ RunTime:0.027486s ]
+SQL: SELECT COUNT(*) AS tp_count FROM mysipo_bbs.mys_ucenter_members LIMIT 1   [ RunTime:0.053891s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.282775s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025766s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run SiteStat [ RunTime:0.303725s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.026629s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.337289s ]
+SQL: select version() as v; [ RunTime:0.027134s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030451s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.027795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.058173s ]
+INFO: Run SystemInfo [ RunTime:0.058214s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.362029s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030744s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.027795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.058441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000167s ]
+
+[ 2016-04-05T10:44:17+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026928s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026430s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.026857s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027185s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026964s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.028237s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026399s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026412s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.029006s ]
+NOTIC: [8] Undefined variable: where /mnt/data/web/mysipo_video/adminmanager/Application/Admin/Controller/PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.027946s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027492s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.027535s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027728s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026691s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.033596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000069s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000161s ]
+
+[ 2016-04-05T10:44:29+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026883s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026399s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026158s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026764s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.028689s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.028680s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026172s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026695s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027218s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026248s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000090s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-04-05T10:44:57+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027309s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026796s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.026731s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027127s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026583s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.031906s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026528s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026398s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027444s ]
+NOTIC: [8] Undefined variable: where /mnt/data/web/mysipo_video/adminmanager/Application/Admin/Controller/PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.026473s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027557s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.027233s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027562s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026563s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+
+[ 2016-04-05T10:44:58+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027190s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026709s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.026733s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.028002s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026629s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027391s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026845s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026990s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027431s ]
+NOTIC: [8] Undefined variable: where /mnt/data/web/mysipo_video/adminmanager/Application/Admin/Controller/PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.030043s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027888s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.031480s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027479s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026643s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2016-04-05T10:58:26+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027402s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026949s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.035955s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.050069s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026787s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027451s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026587s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026668s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027738s ]
+SQL: UPDATE `lesson_live` SET `live_type`=1 WHERE ( `live_id` = 100009 ) [ RunTime:0.039089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2016-04-05T10:58:34+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027235s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026639s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.029822s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026888s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026668s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027446s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026519s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.028090s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027721s ]
+SQL: UPDATE `lesson_live` SET `live_type`=2 WHERE ( `live_id` = 100009 ) [ RunTime:0.027898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000182s ]
+
+[ 2016-04-05T10:58:41+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.028636s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.031546s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.026550s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.069479s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026797s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027192s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027124s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027630s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.028100s ]
+SQL: UPDATE `lesson_live` SET `live_type`=1 WHERE ( `live_id` = 100009 ) [ RunTime:0.032998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000248s ]
+
+[ 2016-04-05T10:58:53+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027426s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026820s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.026484s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026793s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026731s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027259s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026423s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026348s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027769s ]
+SQL: UPDATE `lesson_live` SET `live_type`=2 WHERE ( `live_id` = 100009 ) [ RunTime:0.027879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000251s ]
+
+[ 2016-04-05T10:59:18+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027701s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026659s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.026706s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.030991s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.032153s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.028186s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027213s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026740s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027507s ]
+SQL: UPDATE `lesson_live` SET `live_type`=2 WHERE ( `live_id` = 65 ) [ RunTime:0.027429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000194s ]
+
+[ 2016-04-05T10:59:20+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027401s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026689s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.026470s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027535s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026474s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027284s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026603s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026475s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027063s ]
+SQL: UPDATE `lesson_live` SET `live_type`=1 WHERE ( `live_id` = 65 ) [ RunTime:0.027207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000202s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000298s ]
+
+[ 2016-04-05T10:59:22+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026561s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026396s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.027398s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026776s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026359s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027260s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026483s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027463s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.026959s ]
+SQL: UPDATE `lesson_live` SET `live_type`=2 WHERE ( `live_id` = 65 ) [ RunTime:0.027044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-04-05T10:59:30+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027061s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026845s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026379s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026924s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027445s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.028942s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027288s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026543s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027391s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026527s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000397s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2016-04-05T10:59:38+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027856s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026502s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.026424s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026657s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026340s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.042762s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027069s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026497s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027214s ]
+SQL: UPDATE `lesson_live` SET `live_type`=1 WHERE ( `live_id` = 100009 ) [ RunTime:0.026912s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2016-04-05T10:59:39+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027652s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027093s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026830s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027121s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027653s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027708s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027055s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027877s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027349s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.027015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-04-05T10:59:47+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000198s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027254s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026800s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.026599s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026932s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026753s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027932s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026846s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026666s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027594s ]
+SQL: UPDATE `lesson_live` SET `live_type`=2 WHERE ( `live_id` = 100009 ) [ RunTime:0.029002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-04-05T10:59:47+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027021s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026519s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026525s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026776s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026393s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027241s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.038055s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027032s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.026847s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026432s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.027192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000153s ]
+
+[ 2016-04-05T11:00:13+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027287s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026568s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026414s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027528s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027565s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027541s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026786s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026868s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027309s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026582s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000361s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-04-05T11:00:35+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.028344s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026799s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/update%' ) LIMIT 1   [ RunTime:0.026565s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026919s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.049016s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027453s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026770s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027127s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.028404s ]
+SQL: UPDATE `lesson_live` SET `live_type`=2 WHERE ( `live_id` = 62 ) [ RunTime:0.028933s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000171s ]
+
+[ 2016-04-05T11:00:51+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026725s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.028171s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026380s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026937s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026837s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027402s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026766s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026567s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027067s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.033709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2016-04-05T11:01:59+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/edit/id/100009.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027285s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026618s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/edit%' ) LIMIT 1   [ RunTime:0.026485s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027585s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027342s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027671s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027931s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.029109s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.029499s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027998s ]
+SQL: SELECT video.*,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id and video.live_id = 100009 ) LIMIT 1   [ RunTime:0.026653s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.026875s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026887s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000285s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] Undefined index: type /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 371 行.
+NOTIC: [8] Undefined index: reply_model /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 374 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000067s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2016-04-05T11:02:08+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/edit/id/65.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027154s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.032309s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/edit%' ) LIMIT 1   [ RunTime:0.026449s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026915s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026863s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027730s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026651s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027062s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027380s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.028129s ]
+SQL: SELECT video.*,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id and video.live_id = 65 ) LIMIT 1   [ RunTime:0.027032s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.029767s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026967s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined index: type /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 371 行.
+NOTIC: [8] Undefined index: reply_model /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 374 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000145s ]
+
+[ 2016-04-05T11:02:19+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/edit/id/65.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026465s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.038043s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/edit%' ) LIMIT 1   [ RunTime:0.034212s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026626s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026336s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.026660s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026267s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027366s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027895s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027319s ]
+SQL: SELECT video.*,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id and video.live_id = 65 ) LIMIT 1   [ RunTime:0.026619s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027114s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026709s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+NOTIC: [8] Undefined index: type /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 371 行.
+NOTIC: [8] Undefined index: reply_model /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 374 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+
+[ 2016-04-05T11:02:20+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/edit/id/65.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027310s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027590s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/edit%' ) LIMIT 1   [ RunTime:0.034368s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026764s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026326s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027789s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.067472s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027911s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027340s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.028386s ]
+SQL: SELECT video.*,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id and video.live_id = 65 ) LIMIT 1   [ RunTime:0.027003s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.026921s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026791s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8] Undefined index: type /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 371 行.
+NOTIC: [8] Undefined index: reply_model /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 374 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2016-04-05T11:02:29+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/edit/id/65.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027131s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026822s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/edit%' ) LIMIT 1   [ RunTime:0.026520s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026844s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026639s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027275s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027070s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027553s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.026919s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.026814s ]
+SQL: SELECT video.*,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id and video.live_id = 65 ) LIMIT 1   [ RunTime:0.026574s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.026849s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026516s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000219s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined index: type /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 371 行.
+NOTIC: [8] Undefined index: reply_model /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 374 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2016-04-05T11:03:35+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027830s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026593s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026633s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.028432s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027099s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.039653s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027677s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026784s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027126s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026519s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2016-04-05T11:08:10+08:00 ] 61.50.123.26 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027431s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027030s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.027573s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459825690 ) AND ( deadline = 0 OR deadline > 1459825690 ) ORDER BY `id` DESC  [ RunTime:0.026889s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.027431s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000187s ]
+
+[ 2016-04-05T11:08:19+08:00 ] 61.50.123.26 /adminmanager/index.php
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.038620s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.028464s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.028105s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459825699 ) AND ( deadline = 0 OR deadline > 1459825699 ) ORDER BY `id` DESC  [ RunTime:0.027867s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.029990s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.029099s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-04-05T11:08:20+08:00 ] 180.153.212.13 /adminmanager/index.php
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027473s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026788s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.026931s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459825700 ) AND ( deadline = 0 OR deadline > 1459825700 ) ORDER BY `id` DESC  [ RunTime:0.026711s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.032327s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.034038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000128s ]
+
+[ 2016-04-05T11:08:25+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-04-05T11:08:26+08:00 ] 101.226.33.239 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005599s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000190s ]
+
+[ 2016-04-05T11:08:28+08:00 ] 180.153.214.178 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-04-05T11:12:42+08:00 ] 183.60.15.20 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-04-05T11:19:58+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027281s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026582s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.032435s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027248s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027032s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027587s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026777s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026585s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027030s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026737s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2016-04-05T11:20:32+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027141s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026814s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.026381s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.028967s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.031864s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027405s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027316s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026954s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027505s ]
+NOTIC: [8] Undefined variable: where /mnt/data/web/mysipo_video/adminmanager/Application/Admin/Controller/PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.026302s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.026834s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.026821s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027132s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026525s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000305s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2016-04-05T11:20:37+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027122s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027056s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026939s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027376s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027049s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027618s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.036530s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026562s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027204s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026407s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-04-05T11:21:08+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027842s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026454s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026464s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027051s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026763s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027483s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026986s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026536s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.026949s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026651s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000145s ]
+
+[ 2016-04-05T11:21:30+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+SQL: SHOW COLUMNS FROM `mys_ucenter_members` [ RunTime:0.027602s ]
+SQL: SELECT * FROM `mys_ucenter_members` WHERE ( `username` = '杨先森' ) LIMIT 1   [ RunTime:0.026722s ]
+SQL: UPDATE `mys_ucenter_members` SET `lastlogintime`=1459826489,`lastloginip`=1026718490 WHERE ( `uid` = 107901 ) [ RunTime:0.027346s ]
+NOTIC: [8] Undefined index: db_dsn /mnt/data/web/mysipo_video/adminmanager/ThinkPHP/Library/Think/Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params /mnt/data/web/mysipo_video/adminmanager/ThinkPHP/Library/Think/Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mys_common_member` [ RunTime:0.002796s ]
+SQL: SELECT `uid`,`username`,`adminid` FROM `mys_common_member` WHERE ( `uid` = 107901 ) LIMIT 1   [ RunTime:0.001898s ]
+SQL: SHOW COLUMNS FROM `lesson_action` [ RunTime:0.027514s ]
+SQL: SELECT * FROM `lesson_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.027701s ]
+SQL: SHOW COLUMNS FROM `lesson_member` [ RunTime:0.093490s ]
+SQL: SELECT `nickname` FROM `lesson_member` WHERE ( `uid` = 107901 ) LIMIT 1   [ RunTime:0.026560s ]
+SQL: SHOW COLUMNS FROM `lesson_action_log` [ RunTime:0.027358s ]
+SQL: INSERT INTO `lesson_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,107901,1026718490,'member',107901,1459826489,'在2016-04-05 11:21登录了后台') [ RunTime:0.027197s ]
+SQL: SELECT * FROM `lesson_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.026428s ]
+NOTIC: [8] Undefined offset: 1 /mnt/data/web/mysipo_video/adminmanager/Application/Common/Common/function.php 第 669 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /mnt/data/web/mysipo_video/adminmanager/Application/Common/Common/function.php 第 669 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 107901 ) AND ( `create_time` > 1459740089 ) LIMIT 1   [ RunTime:0.027126s ]
+
+[ 2016-04-05T11:21:30+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Index/index.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027072s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026809s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Index/index%' ) LIMIT 1   [ RunTime:0.026368s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026867s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.026428s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 2 )  [ RunTime:0.026837s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.028308s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '内容' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026619s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026537s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027220s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026516s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027536s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026463s ]
+
+[ 2016-04-05T11:21:32+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Live/mydocument.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.028585s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027043s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Live/mydocument%' ) LIMIT 1   [ RunTime:0.026844s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027131s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.026862s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 2 )  [ RunTime:0.028285s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.031502s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '内容' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026623s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027190s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027080s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026639s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027649s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026713s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026900s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026750s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026573s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.028332s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 107901 ) AND ( `pid` = 0 ) LIMIT 1   [ RunTime:0.026613s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 107901 ) AND ( `pid` = 0 ) ORDER BY update_time desc LIMIT 0,10   [ RunTime:0.026842s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `lesson_addons` [ RunTime:0.028378s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.026696s ]
+SQL: SHOW COLUMNS FROM `lesson_action_log` [ RunTime:0.027156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_action_log` LIMIT 1   [ RunTime:0.026422s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_category` LIMIT 1   [ RunTime:0.026623s ]
+SQL: SHOW COLUMNS FROM `lesson_model` [ RunTime:0.027257s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_model` LIMIT 1   [ RunTime:0.026588s ]
+SQL: SHOW COLUMNS FROM mysipo_bbs.mys_ucenter_members [ RunTime:0.027078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM mysipo_bbs.mys_ucenter_members LIMIT 1   [ RunTime:0.046918s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.270585s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.001872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run SiteStat [ RunTime:0.267875s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.038013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.311532s ]
+SQL: select version() as v; [ RunTime:0.026555s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029047s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.038733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.067792s ]
+INFO: Run SystemInfo [ RunTime:0.067917s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.335911s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029557s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.038733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.068268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000276s ]
+
+[ 2016-04-05T11:21:33+08:00 ] 180.153.163.206 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-04-05T11:21:35+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026863s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026717s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.026528s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026991s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026650s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027932s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027122s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026744s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.029823s ]
+NOTIC: [8] Undefined variable: where /mnt/data/web/mysipo_video/adminmanager/Application/Admin/Controller/PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.027942s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027259s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.028893s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.031462s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.028480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2016-04-05T11:21:37+08:00 ] 61.151.218.119 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000161s ]
+
+[ 2016-04-05T11:21:37+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026975s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026911s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026500s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027114s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.029486s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.030678s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.030359s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.033539s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.045186s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.035755s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030817s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2016-04-05T11:21:38+08:00 ] 61.50.123.26 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027528s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027190s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.029152s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459826497 ) AND ( deadline = 0 OR deadline > 1459826497 ) ORDER BY `id` DESC  [ RunTime:0.026807s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.027032s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026536s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-04-05T11:21:38+08:00 ] 101.226.66.177 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027509s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026874s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.027405s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459826498 ) AND ( deadline = 0 OR deadline > 1459826498 ) ORDER BY `id` DESC  [ RunTime:0.026861s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.026768s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026475s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-04-05T11:21:39+08:00 ] 101.226.51.228 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2016-04-05T11:21:39+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Video/index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.026961s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027105s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Video/index%' ) LIMIT 1   [ RunTime:0.027419s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027045s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026854s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027450s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026608s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026892s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.027283s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_video` LIMIT 1   [ RunTime:0.026594s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.027226s ]
+SQL: SELECT video.*,bbs.uid,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_video video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.video_id desc LIMIT 0,10   [ RunTime:0.026951s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027866s ]
+SQL: SELECT `live_title` FROM `lesson_live` WHERE ( `live_id` = 63 ) LIMIT 1   [ RunTime:0.027244s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8] Undefined index: sub_live /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.027942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000067s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2016-04-05T11:21:41+08:00 ] 101.226.33.204 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-04-05T11:21:41+08:00 ] 112.65.193.14 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2016-04-05T11:21:41+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Video/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027132s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026768s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Video/add%' ) LIMIT 1   [ RunTime:0.028404s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026805s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026640s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.028182s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026561s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026474s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.031544s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026516s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2016-04-05T11:21:44+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.028521s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026824s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.026690s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.026821s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026888s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027543s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026893s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026549s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027340s ]
+NOTIC: [8] Undefined variable: where /mnt/data/web/mysipo_video/adminmanager/Application/Admin/Controller/PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.026482s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027090s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.026795s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.026984s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026495s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000153s ]
+
+[ 2016-04-05T11:21:45+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027191s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.191370s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026469s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027356s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.027977s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.028168s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.028635s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026319s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.026763s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026357s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024954s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2016-04-05T11:21:46+08:00 ] 61.50.123.26 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027179s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026909s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.032073s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459826506 ) AND ( deadline = 0 OR deadline > 1459826506 ) ORDER BY `id` DESC  [ RunTime:0.028743s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.026868s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026406s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-04-05T11:24:50+08:00 ] 101.226.66.174 /adminmanager/index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2016-04-05T11:24:50+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/edit/id/100009.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027094s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.028092s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/edit%' ) LIMIT 1   [ RunTime:0.026446s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.028283s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026788s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.026948s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026514s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026845s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027070s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027373s ]
+SQL: SELECT video.*,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id and video.live_id = 100009 ) LIMIT 1   [ RunTime:0.027009s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.028753s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026455s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000218s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8] Undefined index: type /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 371 行.
+NOTIC: [8] Undefined index: reply_model /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 374 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2016-04-05T11:24:51+08:00 ] 61.50.123.26 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027285s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027039s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.027398s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459826691 ) AND ( deadline = 0 OR deadline > 1459826691 ) ORDER BY `id` DESC  [ RunTime:0.027022s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.027266s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.028691s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-04-05T11:30:23+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027653s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027198s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.029589s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027262s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.032865s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027919s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.039780s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026630s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027459s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026932s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-04-05T11:30:24+08:00 ] 61.50.123.26 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027190s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026440s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.027249s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459827023 ) AND ( deadline = 0 OR deadline > 1459827023 ) ORDER BY `id` DESC  [ RunTime:0.026550s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.026946s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026929s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003738s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003850s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000127s ]
+
+[ 2016-04-05T11:32:40+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/edit/id/100009.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027399s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.027281s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/edit%' ) LIMIT 1   [ RunTime:0.026718s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027036s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026935s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027182s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.027137s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027849s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027800s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.027118s ]
+SQL: SELECT video.*,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id and video.live_id = 100009 ) LIMIT 1   [ RunTime:0.027049s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.032035s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.028519s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+NOTIC: [8] Undefined index: type /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 371 行.
+NOTIC: [8] Undefined index: reply_model /mnt/data/web/mysipo_video/adminmanager/Runtime/Cache/Admin/4b33d1123be48ea1375be2455ba8b370.php 第 374 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025034s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2016-04-05T11:32:41+08:00 ] 61.50.123.26 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027833s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.027116s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.027076s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459827161 ) AND ( deadline = 0 OR deadline > 1459827161 ) ORDER BY `id` DESC  [ RunTime:0.026835s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.027135s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026575s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2016-04-05T11:33:01+08:00 ] 61.50.123.26 /adminmanager/index.php?s=/Admin/Playlive/add.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.027625s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.026507s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/add%' ) LIMIT 1   [ RunTime:0.026496s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.027399s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='107901' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.026811s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.029547s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.026559s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026536s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.027345s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.026669s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000218s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2016-04-05T11:33:02+08:00 ] 61.50.123.26 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.027302s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026760s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.027572s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459827181 ) AND ( deadline = 0 OR deadline > 1459827181 ) ORDER BY `id` DESC  [ RunTime:0.026863s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.028679s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.026577s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.002643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002723s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-04-05T11:45:11+08:00 ] ::1 /adminmanager/
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.013287s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`url`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.007407s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.010579s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1459827911 ) AND ( deadline = 0 OR deadline > 1459827911 ) ORDER BY `id` DESC  [ RunTime:0.007925s ]
+SQL: SHOW COLUMNS FROM `lesson_channel` [ RunTime:0.011369s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `lesson_channel` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.007540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008981s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-04-05T11:45:21+08:00 ] ::1 /adminmanager/index.php?s=/Admin/Marking/index.html&cate_id=55
+ERR: 无法加载控制器:Marking
+
+[ 2016-04-05T11:45:25+08:00 ] ::1 /adminmanager/index.php?s=/Admin
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.006721s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.005628s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Index/index%' ) LIMIT 1   [ RunTime:0.005437s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.009252s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.006147s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 2 )  [ RunTime:0.008518s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.016902s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '内容' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.013919s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.006544s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.005797s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='112247' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.004989s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.009087s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.006811s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.005494s ]
+
+[ 2016-04-05T11:45:26+08:00 ] ::1 /adminmanager/index.php?s=/Admin/Live/mydocument.html
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.034946s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.007282s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Live/mydocument%' ) LIMIT 1   [ RunTime:0.007025s ]
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.006347s ]
+SQL: SELECT `id`,`pid`,`title` FROM `lesson_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.010129s ]
+SQL: SELECT DISTINCT  `group` FROM `lesson_menu` WHERE ( pid = 2 )  [ RunTime:0.008996s ]
+SQL: SELECT `id`,`url` FROM `lesson_menu` WHERE ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 )  [ RunTime:0.010395s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '内容' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.006981s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `lesson_menu` WHERE ( `group` = '' ) AND ( `pid` = 2 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.016597s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.005449s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='112247' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.005163s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.007299s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.006883s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.011641s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='112247' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.005136s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.012107s ]
+SQL: SHOW COLUMNS FROM `lesson_document` [ RunTime:0.006420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 112247 ) AND ( `pid` = 0 ) LIMIT 1   [ RunTime:0.006735s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `lesson_document` WHERE ( `status` IN ('0','1','2') ) AND ( `uid` = 112247 ) AND ( `pid` = 0 ) ORDER BY update_time desc LIMIT 0,10   [ RunTime:0.012115s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `lesson_addons` [ RunTime:0.018999s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.024005s ]
+SQL: SHOW COLUMNS FROM `lesson_action_log` [ RunTime:0.009903s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_action_log` LIMIT 1   [ RunTime:0.005150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_category` LIMIT 1   [ RunTime:0.006807s ]
+SQL: SHOW COLUMNS FROM `lesson_model` [ RunTime:0.026418s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_model` LIMIT 1   [ RunTime:0.009187s ]
+SQL: SHOW COLUMNS FROM mysipo_bbs.mys_ucenter_members [ RunTime:0.005662s ]
+SQL: SELECT COUNT(*) AS tp_count FROM mysipo_bbs.mys_ucenter_members LIMIT 1   [ RunTime:0.045450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.254542s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: Run SiteStat [ RunTime:0.160604s ]
+SQL: SELECT `config` FROM `lesson_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.007298s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.268909s ]
+SQL: select version() as v; [ RunTime:0.005272s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.017640s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008644s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.025920s ]
+INFO: Run SystemInfo [ RunTime:0.025931s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.186609s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.017841s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008644s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.026129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000806s ]
+
+[ 2016-04-05T11:45:29+08:00 ] ::1 /adminmanager/index.php?s=/Admin/Video/index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.008736s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.020892s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Video/index%' ) LIMIT 1   [ RunTime:0.006317s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.010900s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='112247' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.019844s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.009692s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.007183s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.007095s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.017349s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_video` LIMIT 1   [ RunTime:0.011100s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.010484s ]
+SQL: SELECT video.*,bbs.uid,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_video video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.video_id desc LIMIT 0,10   [ RunTime:0.031816s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.020200s ]
+SQL: SELECT `live_title` FROM `lesson_live` WHERE ( `live_id` = 63 ) LIMIT 1   [ RunTime:0.076653s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000369s ]
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.152641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.152701s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-04-05T11:45:31+08:00 ] ::1 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.016636s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.009056s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.023342s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.006446s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='112247' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.014511s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.013742s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.009604s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.018347s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.006959s ]
+NOTIC: [8] Undefined variable: where E:\www\adminmanager\Application\Admin\Controller\PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.005513s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.007412s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.021670s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.011932s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.031404s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000405s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.184651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.184728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000716s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000824s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000911s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2016-04-05T11:45:33+08:00 ] ::1 /adminmanager/index.php?s=/Admin/Video/index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.007357s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.005829s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Video/index%' ) LIMIT 1   [ RunTime:0.004717s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.005281s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='112247' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.004926s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.007227s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.008258s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.005076s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.010283s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_video` LIMIT 1   [ RunTime:0.007879s ]
+SQL: SHOW COLUMNS FROM `lesson_video` [ RunTime:0.017478s ]
+SQL: SELECT video.*,bbs.uid,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_video video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.video_id desc LIMIT 0,10   [ RunTime:0.006847s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.006015s ]
+SQL: SELECT `live_title` FROM `lesson_live` WHERE ( `live_id` = 63 ) LIMIT 1   [ RunTime:0.004759s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+NOTIC: [8] Undefined index: sub_live E:\www\adminmanager\Runtime\Cache\Admin\a1139c397cab62ab83c0f7dbd7530fa9.php 第 166 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.182879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.182957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001487s ]
+
+[ 2016-04-05T11:45:35+08:00 ] ::1 /adminmanager/index.php?s=/Admin/Playlive/Index.html&cate_id=55
+SQL: SHOW COLUMNS FROM `lesson_menu` [ RunTime:0.007356s ]
+SQL: SELECT * FROM `lesson_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) AND ( `is_dev` = 0 ) ORDER BY sort asc  [ RunTime:0.040422s ]
+SQL: SELECT `id` FROM `lesson_menu` WHERE ( url like '%Playlive/index%' ) LIMIT 1   [ RunTime:0.008498s ]
+SQL: SHOW COLUMNS FROM `lesson_auth_group_access` [ RunTime:0.005986s ]
+SQL: SELECT `extend_id` FROM lesson_auth_group_access g INNER JOIN lesson_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='112247' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.005871s ]
+SQL: SHOW COLUMNS FROM `lesson_category` [ RunTime:0.007564s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish`,`url`,`name` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY pid,sort  [ RunTime:0.006920s ]
+SQL: SELECT `id`,`title`,`pid` FROM `lesson_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.006871s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.007543s ]
+NOTIC: [8] Undefined variable: where E:\www\adminmanager\Application\Admin\Controller\PlayliveController.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lesson_live` LIMIT 1   [ RunTime:0.012806s ]
+SQL: SHOW COLUMNS FROM `lesson_live` [ RunTime:0.009645s ]
+SQL: SELECT bbs.uid,bbs.username,video.tch_id,video.live_id,`live_title`,video.live_start_time,video.live_stop_time,video.live_time,video.tch_id,video.lc_id,video.live_num,video.live_type,video.cl_id,video.tutor_id,bbs.username as tch_name,tutor.username as tutor_name FROM lesson_live video INNER JOIN mysipo_bbs.mys_common_member bbs INNER JOIN mysipo_bbs.mys_common_member tutor  WHERE ( video.tch_id = bbs.uid and tutor.uid = video.tutor_id ) ORDER BY video.live_id desc LIMIT 0,10   [ RunTime:0.006719s ]
+SQL: SHOW COLUMNS FROM `lesson_class` [ RunTime:0.006072s ]
+SQL: SELECT `cl_id`,`cl_title` FROM `lesson_class` ORDER BY cl_sort desc,cl_id desc  [ RunTime:0.039055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000327s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000461s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.175410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.175483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000700s ]
+
